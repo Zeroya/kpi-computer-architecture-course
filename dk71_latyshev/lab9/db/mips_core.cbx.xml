@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="mips_core">
+		<CBX_INST_ENTRY INSTANCE_NAME="|mips_core|alu:alu_0|arithm:arithm_0|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_vfm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mips_core|alu:alu_0|arithm:arithm_0|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_28m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mips_core|alu:alu_0|arithm:arithm_0|lpm_mult:Mult0" CBX_FILE_NAME="mult_l8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mips_core|data_memory:data_mem_0|altsyncram:ram_rtl_0" CBX_FILE_NAME="altsyncram_ejh1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

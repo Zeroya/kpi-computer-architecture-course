@@ -1,0 +1,1763 @@
+TimeQuest Timing Analyzer report for mips_core
+Thu Jan 16 10:22:15 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLOCK_27'
+ 12. Slow Model Hold: 'CLOCK_27'
+ 13. Slow Model Minimum Pulse Width: 'CLOCK_27'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Output Enable Times
+ 19. Minimum Output Enable Times
+ 20. Output Disable Times
+ 21. Minimum Output Disable Times
+ 22. Fast Model Setup Summary
+ 23. Fast Model Hold Summary
+ 24. Fast Model Recovery Summary
+ 25. Fast Model Removal Summary
+ 26. Fast Model Minimum Pulse Width Summary
+ 27. Fast Model Setup: 'CLOCK_27'
+ 28. Fast Model Hold: 'CLOCK_27'
+ 29. Fast Model Minimum Pulse Width: 'CLOCK_27'
+ 30. Setup Times
+ 31. Hold Times
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Output Enable Times
+ 35. Minimum Output Enable Times
+ 36. Output Disable Times
+ 37. Minimum Output Disable Times
+ 38. Multicorner Timing Analysis Summary
+ 39. Setup Times
+ 40. Hold Times
+ 41. Clock to Output Times
+ 42. Minimum Clock to Output Times
+ 43. Setup Transfers
+ 44. Hold Transfers
+ 45. Report TCCS
+ 46. Report RSKM
+ 47. Unconstrained Paths
+ 48. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; mips_core                                                         ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C8T144C6                                                       ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   1.4%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; CLOCK_27   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_27 } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++------------------------------------------------+
+; Slow Model Fmax Summary                        ;
++----------+-----------------+------------+------+
+; Fmax     ; Restricted Fmax ; Clock Name ; Note ;
++----------+-----------------+------------+------+
+; 8.04 MHz ; 8.04 MHz        ; CLOCK_27   ;      ;
++----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------+
+; Slow Model Setup Summary            ;
++----------+----------+---------------+
+; Clock    ; Slack    ; End Point TNS ;
++----------+----------+---------------+
+; CLOCK_27 ; -123.452 ; -8379.712     ;
++----------+----------+---------------+
+
+
++----------------------------------+
+; Slow Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_27 ; 0.391 ; 0.000         ;
++----------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; CLOCK_27 ; -1.627 ; -881.446           ;
++----------+--------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLOCK_27'                                                                                                                                                                                             ;
++----------+----------------------------+------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack    ; From Node                  ; To Node                                                                                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++----------+----------------------------+------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -123.452 ; pip_reg:E_reg_5|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 124.537    ;
+; -123.339 ; pip_reg:M_reg_4|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 124.449    ;
+; -123.323 ; pip_reg:D_reg_8|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 124.408    ;
+; -123.316 ; pip_reg:D_reg_8|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 124.401    ;
+; -123.288 ; pip_reg:M_reg_0|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 124.398    ;
+; -123.287 ; pip_reg:E_reg_5|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 124.372    ;
+; -123.234 ; pip_reg:E_reg_5|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 124.344    ;
+; -123.117 ; pip_reg:D_reg_8|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 124.202    ;
+; -123.077 ; pip_reg:M_reg_2|o_data[31] ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 124.157    ;
+; -122.991 ; pip_reg:M_reg_4|o_data[3]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 124.101    ;
+; -122.980 ; pip_reg:E_reg_5|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 124.065    ;
+; -122.939 ; pip_reg:M_reg_1|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.094      ; 123.998    ;
+; -122.876 ; pip_reg:E_reg_5|o_data[1]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.038      ; 123.950    ;
+; -122.869 ; pip_reg:E_reg_5|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.954    ;
+; -122.867 ; pip_reg:M_reg_4|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.977    ;
+; -122.851 ; pip_reg:D_reg_8|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.936    ;
+; -122.844 ; pip_reg:D_reg_8|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.929    ;
+; -122.816 ; pip_reg:M_reg_0|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.926    ;
+; -122.815 ; pip_reg:E_reg_5|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.900    ;
+; -122.763 ; pip_reg:M_reg_4|o_data[0]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.063      ; 123.862    ;
+; -122.762 ; pip_reg:E_reg_5|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.872    ;
+; -122.756 ; pip_reg:M_reg_4|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.866    ;
+; -122.747 ; pip_reg:D_reg_8|o_data[1]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.038      ; 123.821    ;
+; -122.740 ; pip_reg:D_reg_8|o_data[2]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.038      ; 123.814    ;
+; -122.740 ; pip_reg:D_reg_8|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.825    ;
+; -122.733 ; pip_reg:D_reg_8|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.818    ;
+; -122.720 ; pip_reg:M_reg_4|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.805    ;
+; -122.712 ; pip_reg:M_reg_0|o_data[0]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.063      ; 123.811    ;
+; -122.711 ; pip_reg:E_reg_5|o_data[2]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.038      ; 123.785    ;
+; -122.705 ; pip_reg:M_reg_0|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.815    ;
+; -122.704 ; pip_reg:E_reg_5|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.789    ;
+; -122.658 ; pip_reg:E_reg_5|o_data[0]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.063      ; 123.757    ;
+; -122.653 ; pip_reg:E_reg_5|o_data[3]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.738    ;
+; -122.651 ; pip_reg:E_reg_5|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.761    ;
+; -122.645 ; pip_reg:D_reg_8|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.730    ;
+; -122.605 ; pip_reg:M_reg_2|o_data[31] ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 123.685    ;
+; -122.595 ; pip_reg:E_reg_5|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.680    ;
+; -122.541 ; pip_reg:D_reg_8|o_data[0]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.038      ; 123.615    ;
+; -122.534 ; pip_reg:D_reg_8|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.619    ;
+; -122.519 ; pip_reg:M_reg_4|o_data[3]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.629    ;
+; -122.501 ; pip_reg:M_reg_2|o_data[31] ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.033      ; 123.570    ;
+; -122.494 ; pip_reg:M_reg_2|o_data[31] ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 123.574    ;
+; -122.482 ; pip_reg:M_reg_4|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.592    ;
+; -122.467 ; pip_reg:M_reg_1|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.094      ; 123.526    ;
+; -122.466 ; pip_reg:D_reg_8|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.551    ;
+; -122.459 ; pip_reg:D_reg_8|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.544    ;
+; -122.431 ; pip_reg:M_reg_0|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.541    ;
+; -122.430 ; pip_reg:E_reg_5|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.515    ;
+; -122.415 ; pip_reg:M_reg_4|o_data[3]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.063      ; 123.514    ;
+; -122.408 ; pip_reg:M_reg_4|o_data[3]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.518    ;
+; -122.377 ; pip_reg:E_reg_5|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.487    ;
+; -122.364 ; pip_reg:M_reg_4|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.449    ;
+; -122.363 ; pip_reg:M_reg_1|o_data[0]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.012      ; 123.411    ;
+; -122.356 ; pip_reg:M_reg_1|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.094      ; 123.415    ;
+; -122.349 ; pip_reg:E_reg_5|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.434    ;
+; -122.322 ; pip_reg:E_reg_5|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.407    ;
+; -122.317 ; pip_reg:E_reg_5|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg3 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.402    ;
+; -122.297 ; pip_reg:E_reg_5|o_data[1]  ; pip_reg:E_reg_3|o_data[16]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.017      ; 123.350    ;
+; -122.260 ; pip_reg:D_reg_8|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.345    ;
+; -122.249 ; pip_reg:E_reg_0|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.334    ;
+; -122.248 ; pip_reg:M_reg_4|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.333    ;
+; -122.236 ; pip_reg:M_reg_4|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.346    ;
+; -122.220 ; pip_reg:M_reg_2|o_data[31] ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 123.300    ;
+; -122.220 ; pip_reg:D_reg_8|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.305    ;
+; -122.213 ; pip_reg:D_reg_8|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.298    ;
+; -122.209 ; pip_reg:M_reg_4|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.319    ;
+; -122.204 ; pip_reg:M_reg_4|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg3 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.314    ;
+; -122.193 ; pip_reg:E_reg_5|o_data[1]  ; pip_reg:E_reg_3|o_data[6]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.021      ; 123.250    ;
+; -122.193 ; pip_reg:D_reg_8|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.278    ;
+; -122.188 ; pip_reg:D_reg_8|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg3 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.273    ;
+; -122.187 ; pip_reg:E_reg_5|o_data[1]  ; pip_reg:E_reg_3|o_data[15]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; -0.013     ; 123.210    ;
+; -122.186 ; pip_reg:D_reg_8|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.271    ;
+; -122.185 ; pip_reg:M_reg_0|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.295    ;
+; -122.184 ; pip_reg:E_reg_5|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.269    ;
+; -122.184 ; pip_reg:M_reg_4|o_data[0]  ; pip_reg:E_reg_3|o_data[16]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.042      ; 123.262    ;
+; -122.181 ; pip_reg:E_reg_5|o_data[3]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.266    ;
+; -122.181 ; pip_reg:D_reg_8|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg3 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.266    ;
+; -122.168 ; pip_reg:D_reg_8|o_data[1]  ; pip_reg:E_reg_3|o_data[16]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.017      ; 123.221    ;
+; -122.161 ; pip_reg:D_reg_8|o_data[2]  ; pip_reg:E_reg_3|o_data[16]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.017      ; 123.214    ;
+; -122.158 ; pip_reg:M_reg_0|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.268    ;
+; -122.157 ; pip_reg:E_reg_5|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.242    ;
+; -122.153 ; pip_reg:M_reg_0|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg3 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.263    ;
+; -122.152 ; pip_reg:E_reg_5|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg3 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.237    ;
+; -122.144 ; pip_reg:M_reg_4|o_data[1]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.038      ; 123.218    ;
+; -122.137 ; pip_reg:M_reg_4|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.222    ;
+; -122.134 ; pip_reg:M_reg_4|o_data[3]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.244    ;
+; -122.133 ; pip_reg:M_reg_0|o_data[0]  ; pip_reg:E_reg_3|o_data[16]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.042      ; 123.211    ;
+; -122.132 ; pip_reg:E_reg_5|o_data[2]  ; pip_reg:E_reg_3|o_data[16]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.017      ; 123.185    ;
+; -122.131 ; pip_reg:E_reg_5|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.241    ;
+; -122.116 ; pip_reg:E_reg_3|o_data[31] ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.136      ; 123.217    ;
+; -122.104 ; pip_reg:E_reg_5|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.214    ;
+; -122.100 ; pip_reg:E_reg_3|o_data[28] ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.094      ; 123.159    ;
+; -122.099 ; pip_reg:E_reg_5|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg3 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.145      ; 123.209    ;
+; -122.087 ; pip_reg:M_reg_2|o_data[29] ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.072      ; 123.124    ;
+; -122.082 ; pip_reg:M_reg_1|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.094      ; 123.141    ;
+; -122.080 ; pip_reg:M_reg_4|o_data[0]  ; pip_reg:E_reg_3|o_data[6]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.046      ; 123.162    ;
+; -122.079 ; pip_reg:E_reg_5|o_data[0]  ; pip_reg:E_reg_3|o_data[16]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.042      ; 123.157    ;
+; -122.077 ; pip_reg:E_reg_5|o_data[3]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.038      ; 123.151    ;
+; -122.074 ; pip_reg:M_reg_4|o_data[0]  ; pip_reg:E_reg_3|o_data[15]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.012      ; 123.122    ;
+; -122.070 ; pip_reg:E_reg_5|o_data[3]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.120      ; 123.155    ;
++----------+----------------------------+------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLOCK_27'                                                                                                                                             ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; pip_reg:F_reg_0|o_data[31]                  ; pip_reg:F_reg_0|o_data[31]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; pip_reg:F_reg_0|o_data[28]                  ; pip_reg:F_reg_0|o_data[28]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; pip_reg:F_reg_0|o_data[26]                  ; pip_reg:F_reg_0|o_data[26]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][26]              ; gpio:gpio_0|gpio_regs[130][26]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][26]              ; gpio:gpio_0|gpio_regs[128][26]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][2]               ; gpio:gpio_0|gpio_regs[128][2]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][2]               ; gpio:gpio_0|gpio_regs[130][2]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][7]               ; gpio:gpio_0|gpio_regs[130][7]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][7]               ; gpio:gpio_0|gpio_regs[128][7]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][10]              ; gpio:gpio_0|gpio_regs[130][10]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][10]              ; gpio:gpio_0|gpio_regs[128][10]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][9]               ; gpio:gpio_0|gpio_regs[128][9]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][9]               ; gpio:gpio_0|gpio_regs[130][9]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][11]              ; gpio:gpio_0|gpio_regs[130][11]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][11]              ; gpio:gpio_0|gpio_regs[128][11]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][21]              ; gpio:gpio_0|gpio_regs[130][21]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][21]              ; gpio:gpio_0|gpio_regs[128][21]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][13]              ; gpio:gpio_0|gpio_regs[130][13]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][13]              ; gpio:gpio_0|gpio_regs[128][13]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][3]               ; gpio:gpio_0|gpio_regs[130][3]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][3]               ; gpio:gpio_0|gpio_regs[128][3]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][5]               ; gpio:gpio_0|gpio_regs[128][5]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][5]               ; gpio:gpio_0|gpio_regs[130][5]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][17]              ; gpio:gpio_0|gpio_regs[130][17]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][17]              ; gpio:gpio_0|gpio_regs[128][17]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][22]              ; gpio:gpio_0|gpio_regs[128][22]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][22]              ; gpio:gpio_0|gpio_regs[130][22]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][23]              ; gpio:gpio_0|gpio_regs[130][23]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][23]              ; gpio:gpio_0|gpio_regs[128][23]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][25]              ; gpio:gpio_0|gpio_regs[130][25]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][25]              ; gpio:gpio_0|gpio_regs[128][25]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][20]              ; gpio:gpio_0|gpio_regs[130][20]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][20]              ; gpio:gpio_0|gpio_regs[128][20]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][16]              ; gpio:gpio_0|gpio_regs[130][16]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][16]              ; gpio:gpio_0|gpio_regs[128][16]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][18]              ; gpio:gpio_0|gpio_regs[128][18]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][18]              ; gpio:gpio_0|gpio_regs[130][18]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][15]              ; gpio:gpio_0|gpio_regs[128][15]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][15]              ; gpio:gpio_0|gpio_regs[130][15]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][27]              ; gpio:gpio_0|gpio_regs[130][27]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][27]              ; gpio:gpio_0|gpio_regs[128][27]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][24]              ; gpio:gpio_0|gpio_regs[130][24]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][24]              ; gpio:gpio_0|gpio_regs[128][24]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][14]              ; gpio:gpio_0|gpio_regs[128][14]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][14]              ; gpio:gpio_0|gpio_regs[130][14]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][19]              ; gpio:gpio_0|gpio_regs[130][19]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][19]              ; gpio:gpio_0|gpio_regs[128][19]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][8]               ; gpio:gpio_0|gpio_regs[128][8]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][8]               ; gpio:gpio_0|gpio_regs[130][8]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][29]              ; gpio:gpio_0|gpio_regs[130][29]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][29]              ; gpio:gpio_0|gpio_regs[128][29]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][6]               ; gpio:gpio_0|gpio_regs[128][6]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][6]               ; gpio:gpio_0|gpio_regs[130][6]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][30]              ; gpio:gpio_0|gpio_regs[128][30]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][30]              ; gpio:gpio_0|gpio_regs[130][30]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][4]               ; gpio:gpio_0|gpio_regs[130][4]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][4]               ; gpio:gpio_0|gpio_regs[128][4]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][28]              ; gpio:gpio_0|gpio_regs[130][28]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][28]              ; gpio:gpio_0|gpio_regs[128][28]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][31]              ; gpio:gpio_0|gpio_regs[130][31]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][31]              ; gpio:gpio_0|gpio_regs[128][31]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][12]              ; gpio:gpio_0|gpio_regs[130][12]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][12]              ; gpio:gpio_0|gpio_regs[128][12]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][1]               ; gpio:gpio_0|gpio_regs[130][1]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][1]               ; gpio:gpio_0|gpio_regs[128][1]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[130][0]               ; gpio:gpio_0|gpio_regs[130][0]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; gpio:gpio_0|gpio_regs[128][0]               ; gpio:gpio_0|gpio_regs[128][0]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; pip_reg:F_reg_0|o_data[27]                  ; pip_reg:F_reg_0|o_data[27]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.517 ; data_memory:data_mem_0|ram_rtl_0_bypass[63] ; pip_reg:M_reg_2|o_data[24]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.783      ;
+; 0.518 ; data_memory:data_mem_0|ram_rtl_0_bypass[57] ; pip_reg:M_reg_2|o_data[21]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.784      ;
+; 0.519 ; data_memory:data_mem_0|ram_rtl_0_bypass[39] ; pip_reg:M_reg_2|o_data[12]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.785      ;
+; 0.520 ; data_memory:data_mem_0|ram_rtl_0_bypass[33] ; pip_reg:M_reg_2|o_data[9]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.786      ;
+; 0.520 ; data_memory:data_mem_0|ram_rtl_0_bypass[27] ; pip_reg:M_reg_2|o_data[6]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.786      ;
+; 0.520 ; data_memory:data_mem_0|ram_rtl_0_bypass[71] ; pip_reg:M_reg_2|o_data[28]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.786      ;
+; 0.522 ; data_memory:data_mem_0|ram_rtl_0_bypass[35] ; pip_reg:M_reg_2|o_data[10]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.788      ;
+; 0.524 ; pip_reg:F_reg_0|o_data[2]                   ; prog_counter:pc_0|o_data[2]                 ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.790      ;
+; 0.528 ; data_memory:data_mem_0|ram_rtl_0_bypass[69] ; pip_reg:M_reg_2|o_data[27]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.794      ;
+; 0.529 ; data_memory:data_mem_0|ram_rtl_0_bypass[37] ; pip_reg:M_reg_2|o_data[11]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.795      ;
+; 0.530 ; pip_reg:E_reg_4|o_data[5]                   ; data_memory:data_mem_0|ram_rtl_0_bypass[25] ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.796      ;
+; 0.532 ; data_memory:data_mem_0|ram_rtl_0_bypass[21] ; pip_reg:M_reg_2|o_data[3]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.798      ;
+; 0.532 ; pip_reg:E_reg_4|o_data[17]                  ; data_memory:data_mem_0|ram_rtl_0_bypass[49] ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.798      ;
+; 0.532 ; pip_reg:E_reg_4|o_data[17]                  ; data_memory:data_mem_0|ram~18               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.798      ;
+; 0.533 ; pip_reg:E_reg_4|o_data[20]                  ; data_memory:data_mem_0|ram_rtl_0_bypass[55] ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.799      ;
+; 0.534 ; pip_reg:E_reg_4|o_data[7]                   ; data_memory:data_mem_0|ram_rtl_0_bypass[29] ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.800      ;
+; 0.535 ; pip_reg:E_reg_4|o_data[7]                   ; data_memory:data_mem_0|ram~8                ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.801      ;
+; 0.546 ; pip_reg:D_reg_4|o_data[0]                   ; pip_reg:E_reg_5|o_data[0]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.812      ;
+; 0.553 ; prog_counter:pc_0|o_data[6]                 ; pip_reg:F_reg_0|o_data[12]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.819      ;
+; 0.554 ; prog_counter:pc_0|o_data[6]                 ; pip_reg:F_reg_0|o_data[2]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.820      ;
+; 0.661 ; data_memory:data_mem_0|ram_rtl_0_bypass[59] ; pip_reg:M_reg_2|o_data[22]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.002      ; 0.929      ;
+; 0.665 ; pip_reg:E_reg_4|o_data[19]                  ; data_memory:data_mem_0|ram_rtl_0_bypass[53] ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.931      ;
+; 0.688 ; pip_reg:E_reg_3|o_data[31]                  ; pip_reg:M_reg_3|o_data[31]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.954      ;
+; 0.691 ; prog_counter:pc_0|o_data[5]                 ; pip_reg:F_reg_0|o_data[2]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.957      ;
+; 0.695 ; data_memory:data_mem_0|ram_rtl_0_bypass[15] ; pip_reg:M_reg_2|o_data[0]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.003      ; 0.964      ;
+; 0.715 ; data_memory:data_mem_0|ram_rtl_0_bypass[31] ; pip_reg:M_reg_2|o_data[8]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.981      ;
+; 0.744 ; data_memory:data_mem_0|ram_rtl_0_bypass[19] ; pip_reg:M_reg_2|o_data[2]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.003      ; 1.013      ;
+; 0.745 ; pip_reg:E_reg_4|o_data[6]                   ; gpio:gpio_0|gpio_regs[128][6]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; -0.003     ; 1.008      ;
+; 0.747 ; pip_reg:E_reg_4|o_data[6]                   ; gpio:gpio_0|gpio_regs[130][6]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; -0.003     ; 1.010      ;
+; 0.749 ; pip_reg:E_reg_4|o_data[9]                   ; gpio:gpio_0|gpio_regs[128][9]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; -0.003     ; 1.012      ;
+; 0.750 ; pip_reg:E_reg_4|o_data[9]                   ; data_memory:data_mem_0|ram_rtl_0_bypass[33] ; CLOCK_27     ; CLOCK_27    ; 0.000        ; -0.003     ; 1.013      ;
+; 0.750 ; pip_reg:E_reg_4|o_data[6]                   ; data_memory:data_mem_0|ram_rtl_0_bypass[27] ; CLOCK_27     ; CLOCK_27    ; 0.000        ; -0.003     ; 1.013      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK_27'                                                                                                                                                     ;
++--------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                                                                                     ;
++--------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------------------------------+
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg10 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg10 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg11 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg11 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg12 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg12 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg13 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg13 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg14 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg14 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg15 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg15 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg16 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg16 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg17 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg17 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg18 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg18 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg19 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg19 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg20 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg20 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg21 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg21 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg22 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg22 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg23 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg23 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg24 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg24 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg25 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg25 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg26 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg26 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg27 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg27 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg28 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg28 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg29 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg29 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg30 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg30 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg31 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg31 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg8  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg8  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg9  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg9  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a10~porta_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a10~porta_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a11~porta_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a11~porta_memory_reg0 ;
++--------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; CLOCK_27   ; 5.088 ; 5.088 ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 5.088 ; 5.088 ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 4.703 ; 4.703 ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 4.766 ; 4.766 ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 4.654 ; 4.654 ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 4.565 ; 4.565 ; Rise       ; CLOCK_27        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; CLOCK_27   ; -4.335 ; -4.335 ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; -4.858 ; -4.858 ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; -4.473 ; -4.473 ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; -4.536 ; -4.536 ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; -4.424 ; -4.424 ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; -4.335 ; -4.335 ; Rise       ; CLOCK_27        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++-----------+------------+---------+---------+------------+-----------------+
+; Data Port ; Clock Port ; Rise    ; Fall    ; Clock Edge ; Clock Reference ;
++-----------+------------+---------+---------+------------+-----------------+
+; HEX0[*]   ; CLOCK_27   ; 7.551   ; 7.551   ; Rise       ; CLOCK_27        ;
+;  HEX0[0]  ; CLOCK_27   ; 7.234   ; 7.234   ; Rise       ; CLOCK_27        ;
+;  HEX0[1]  ; CLOCK_27   ; 6.937   ; 6.937   ; Rise       ; CLOCK_27        ;
+;  HEX0[2]  ; CLOCK_27   ; 6.798   ; 6.798   ; Rise       ; CLOCK_27        ;
+;  HEX0[3]  ; CLOCK_27   ; 6.526   ; 6.526   ; Rise       ; CLOCK_27        ;
+;  HEX0[4]  ; CLOCK_27   ; 6.579   ; 6.579   ; Rise       ; CLOCK_27        ;
+;  HEX0[5]  ; CLOCK_27   ; 6.942   ; 6.942   ; Rise       ; CLOCK_27        ;
+;  HEX0[6]  ; CLOCK_27   ; 7.551   ; 7.551   ; Rise       ; CLOCK_27        ;
+; HEX1[*]   ; CLOCK_27   ; 6.956   ; 6.956   ; Rise       ; CLOCK_27        ;
+;  HEX1[0]  ; CLOCK_27   ; 6.674   ; 6.674   ; Rise       ; CLOCK_27        ;
+;  HEX1[1]  ; CLOCK_27   ; 6.707   ; 6.707   ; Rise       ; CLOCK_27        ;
+;  HEX1[2]  ; CLOCK_27   ; 6.660   ; 6.660   ; Rise       ; CLOCK_27        ;
+;  HEX1[3]  ; CLOCK_27   ; 6.925   ; 6.925   ; Rise       ; CLOCK_27        ;
+;  HEX1[4]  ; CLOCK_27   ; 6.956   ; 6.956   ; Rise       ; CLOCK_27        ;
+;  HEX1[5]  ; CLOCK_27   ; 6.575   ; 6.575   ; Rise       ; CLOCK_27        ;
+;  HEX1[6]  ; CLOCK_27   ; 6.672   ; 6.672   ; Rise       ; CLOCK_27        ;
+; HEX2[*]   ; CLOCK_27   ; 7.520   ; 7.520   ; Rise       ; CLOCK_27        ;
+;  HEX2[0]  ; CLOCK_27   ; 7.303   ; 7.303   ; Rise       ; CLOCK_27        ;
+;  HEX2[1]  ; CLOCK_27   ; 6.942   ; 6.942   ; Rise       ; CLOCK_27        ;
+;  HEX2[2]  ; CLOCK_27   ; 6.159   ; 6.159   ; Rise       ; CLOCK_27        ;
+;  HEX2[3]  ; CLOCK_27   ; 6.483   ; 6.483   ; Rise       ; CLOCK_27        ;
+;  HEX2[4]  ; CLOCK_27   ; 7.262   ; 7.262   ; Rise       ; CLOCK_27        ;
+;  HEX2[5]  ; CLOCK_27   ; 6.872   ; 6.872   ; Rise       ; CLOCK_27        ;
+;  HEX2[6]  ; CLOCK_27   ; 7.520   ; 7.520   ; Rise       ; CLOCK_27        ;
+; LEDG[*]   ; CLOCK_27   ; 136.235 ; 136.235 ; Rise       ; CLOCK_27        ;
+;  LEDG[0]  ; CLOCK_27   ; 136.235 ; 136.235 ; Rise       ; CLOCK_27        ;
+;  LEDG[1]  ; CLOCK_27   ; 19.991  ; 19.991  ; Rise       ; CLOCK_27        ;
+;  LEDG[2]  ; CLOCK_27   ; 18.988  ; 18.988  ; Rise       ; CLOCK_27        ;
+;  LEDG[3]  ; CLOCK_27   ; 6.892   ; 6.892   ; Rise       ; CLOCK_27        ;
+;  LEDG[4]  ; CLOCK_27   ; 6.247   ; 6.247   ; Rise       ; CLOCK_27        ;
+;  LEDG[5]  ; CLOCK_27   ; 6.854   ; 6.854   ; Rise       ; CLOCK_27        ;
+; LEDR[*]   ; CLOCK_27   ; 6.978   ; 6.978   ; Rise       ; CLOCK_27        ;
+;  LEDR[0]  ; CLOCK_27   ; 6.978   ; 6.978   ; Rise       ; CLOCK_27        ;
+;  LEDR[1]  ; CLOCK_27   ; 6.920   ; 6.920   ; Rise       ; CLOCK_27        ;
+;  LEDR[2]  ; CLOCK_27   ; 6.839   ; 6.839   ; Rise       ; CLOCK_27        ;
+; SW[*]     ; CLOCK_27   ; 6.795   ; 6.795   ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 6.134   ; 6.134   ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 6.125   ; 6.125   ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 6.201   ; 6.201   ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 6.795   ; 6.795   ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 6.439   ; 6.439   ; Rise       ; CLOCK_27        ;
+; instr[*]  ; CLOCK_27   ; 7.112   ; 7.112   ; Rise       ; CLOCK_27        ;
+;  instr[0] ; CLOCK_27   ; 6.872   ; 6.872   ; Rise       ; CLOCK_27        ;
+;  instr[1] ; CLOCK_27   ; 7.068   ; 7.068   ; Rise       ; CLOCK_27        ;
+;  instr[2] ; CLOCK_27   ; 6.805   ; 6.805   ; Rise       ; CLOCK_27        ;
+;  instr[3] ; CLOCK_27   ; 7.112   ; 7.112   ; Rise       ; CLOCK_27        ;
+;  instr[4] ; CLOCK_27   ; 7.076   ; 7.076   ; Rise       ; CLOCK_27        ;
+;  instr[5] ; CLOCK_27   ; 6.639   ; 6.639   ; Rise       ; CLOCK_27        ;
+;  instr[6] ; CLOCK_27   ; 6.529   ; 6.529   ; Rise       ; CLOCK_27        ;
++-----------+------------+---------+---------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; CLOCK_27   ; 6.526  ; 6.526  ; Rise       ; CLOCK_27        ;
+;  HEX0[0]  ; CLOCK_27   ; 7.234  ; 7.234  ; Rise       ; CLOCK_27        ;
+;  HEX0[1]  ; CLOCK_27   ; 6.937  ; 6.937  ; Rise       ; CLOCK_27        ;
+;  HEX0[2]  ; CLOCK_27   ; 6.798  ; 6.798  ; Rise       ; CLOCK_27        ;
+;  HEX0[3]  ; CLOCK_27   ; 6.526  ; 6.526  ; Rise       ; CLOCK_27        ;
+;  HEX0[4]  ; CLOCK_27   ; 6.579  ; 6.579  ; Rise       ; CLOCK_27        ;
+;  HEX0[5]  ; CLOCK_27   ; 6.942  ; 6.942  ; Rise       ; CLOCK_27        ;
+;  HEX0[6]  ; CLOCK_27   ; 7.551  ; 7.551  ; Rise       ; CLOCK_27        ;
+; HEX1[*]   ; CLOCK_27   ; 6.575  ; 6.575  ; Rise       ; CLOCK_27        ;
+;  HEX1[0]  ; CLOCK_27   ; 6.674  ; 6.674  ; Rise       ; CLOCK_27        ;
+;  HEX1[1]  ; CLOCK_27   ; 6.707  ; 6.707  ; Rise       ; CLOCK_27        ;
+;  HEX1[2]  ; CLOCK_27   ; 6.660  ; 6.660  ; Rise       ; CLOCK_27        ;
+;  HEX1[3]  ; CLOCK_27   ; 6.925  ; 6.925  ; Rise       ; CLOCK_27        ;
+;  HEX1[4]  ; CLOCK_27   ; 6.956  ; 6.956  ; Rise       ; CLOCK_27        ;
+;  HEX1[5]  ; CLOCK_27   ; 6.575  ; 6.575  ; Rise       ; CLOCK_27        ;
+;  HEX1[6]  ; CLOCK_27   ; 6.672  ; 6.672  ; Rise       ; CLOCK_27        ;
+; HEX2[*]   ; CLOCK_27   ; 6.159  ; 6.159  ; Rise       ; CLOCK_27        ;
+;  HEX2[0]  ; CLOCK_27   ; 7.303  ; 7.303  ; Rise       ; CLOCK_27        ;
+;  HEX2[1]  ; CLOCK_27   ; 6.942  ; 6.942  ; Rise       ; CLOCK_27        ;
+;  HEX2[2]  ; CLOCK_27   ; 6.159  ; 6.159  ; Rise       ; CLOCK_27        ;
+;  HEX2[3]  ; CLOCK_27   ; 6.483  ; 6.483  ; Rise       ; CLOCK_27        ;
+;  HEX2[4]  ; CLOCK_27   ; 7.262  ; 7.262  ; Rise       ; CLOCK_27        ;
+;  HEX2[5]  ; CLOCK_27   ; 6.872  ; 6.872  ; Rise       ; CLOCK_27        ;
+;  HEX2[6]  ; CLOCK_27   ; 7.520  ; 7.520  ; Rise       ; CLOCK_27        ;
+; LEDG[*]   ; CLOCK_27   ; 6.247  ; 6.247  ; Rise       ; CLOCK_27        ;
+;  LEDG[0]  ; CLOCK_27   ; 10.891 ; 10.891 ; Rise       ; CLOCK_27        ;
+;  LEDG[1]  ; CLOCK_27   ; 9.499  ; 9.499  ; Rise       ; CLOCK_27        ;
+;  LEDG[2]  ; CLOCK_27   ; 9.493  ; 9.493  ; Rise       ; CLOCK_27        ;
+;  LEDG[3]  ; CLOCK_27   ; 6.892  ; 6.892  ; Rise       ; CLOCK_27        ;
+;  LEDG[4]  ; CLOCK_27   ; 6.247  ; 6.247  ; Rise       ; CLOCK_27        ;
+;  LEDG[5]  ; CLOCK_27   ; 6.854  ; 6.854  ; Rise       ; CLOCK_27        ;
+; LEDR[*]   ; CLOCK_27   ; 6.839  ; 6.839  ; Rise       ; CLOCK_27        ;
+;  LEDR[0]  ; CLOCK_27   ; 6.978  ; 6.978  ; Rise       ; CLOCK_27        ;
+;  LEDR[1]  ; CLOCK_27   ; 6.920  ; 6.920  ; Rise       ; CLOCK_27        ;
+;  LEDR[2]  ; CLOCK_27   ; 6.839  ; 6.839  ; Rise       ; CLOCK_27        ;
+; SW[*]     ; CLOCK_27   ; 6.125  ; 6.125  ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 6.134  ; 6.134  ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 6.125  ; 6.125  ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 6.201  ; 6.201  ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 6.795  ; 6.795  ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 6.439  ; 6.439  ; Rise       ; CLOCK_27        ;
+; instr[*]  ; CLOCK_27   ; 6.529  ; 6.529  ; Rise       ; CLOCK_27        ;
+;  instr[0] ; CLOCK_27   ; 6.872  ; 6.872  ; Rise       ; CLOCK_27        ;
+;  instr[1] ; CLOCK_27   ; 7.068  ; 7.068  ; Rise       ; CLOCK_27        ;
+;  instr[2] ; CLOCK_27   ; 6.805  ; 6.805  ; Rise       ; CLOCK_27        ;
+;  instr[3] ; CLOCK_27   ; 7.112  ; 7.112  ; Rise       ; CLOCK_27        ;
+;  instr[4] ; CLOCK_27   ; 7.076  ; 7.076  ; Rise       ; CLOCK_27        ;
+;  instr[5] ; CLOCK_27   ; 6.639  ; 6.639  ; Rise       ; CLOCK_27        ;
+;  instr[6] ; CLOCK_27   ; 6.529  ; 6.529  ; Rise       ; CLOCK_27        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------+
+; Output Enable Times                                                  ;
++-----------+------------+-------+------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+------+------------+-----------------+
+; HEX0[*]   ; CLOCK_27   ; 6.481 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[0]  ; CLOCK_27   ; 7.179 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[1]  ; CLOCK_27   ; 7.080 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[2]  ; CLOCK_27   ; 7.081 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[3]  ; CLOCK_27   ; 6.481 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[4]  ; CLOCK_27   ; 6.551 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[5]  ; CLOCK_27   ; 6.964 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[6]  ; CLOCK_27   ; 7.275 ;      ; Rise       ; CLOCK_27        ;
+; HEX1[*]   ; CLOCK_27   ; 6.421 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[0]  ; CLOCK_27   ; 6.659 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[1]  ; CLOCK_27   ; 6.672 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[2]  ; CLOCK_27   ; 6.830 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[3]  ; CLOCK_27   ; 6.866 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[4]  ; CLOCK_27   ; 6.939 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[5]  ; CLOCK_27   ; 6.549 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[6]  ; CLOCK_27   ; 6.421 ;      ; Rise       ; CLOCK_27        ;
+; HEX2[*]   ; CLOCK_27   ; 6.123 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[0]  ; CLOCK_27   ; 7.349 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[1]  ; CLOCK_27   ; 6.900 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[2]  ; CLOCK_27   ; 6.123 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[3]  ; CLOCK_27   ; 6.738 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[4]  ; CLOCK_27   ; 7.263 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[5]  ; CLOCK_27   ; 6.863 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[6]  ; CLOCK_27   ; 7.166 ;      ; Rise       ; CLOCK_27        ;
+; LEDG[*]   ; CLOCK_27   ; 6.159 ;      ; Rise       ; CLOCK_27        ;
+;  LEDG[3]  ; CLOCK_27   ; 6.957 ;      ; Rise       ; CLOCK_27        ;
+;  LEDG[4]  ; CLOCK_27   ; 6.159 ;      ; Rise       ; CLOCK_27        ;
+;  LEDG[5]  ; CLOCK_27   ; 6.798 ;      ; Rise       ; CLOCK_27        ;
+; LEDR[*]   ; CLOCK_27   ; 6.423 ;      ; Rise       ; CLOCK_27        ;
+;  LEDR[0]  ; CLOCK_27   ; 7.505 ;      ; Rise       ; CLOCK_27        ;
+;  LEDR[1]  ; CLOCK_27   ; 6.423 ;      ; Rise       ; CLOCK_27        ;
+;  LEDR[2]  ; CLOCK_27   ; 6.835 ;      ; Rise       ; CLOCK_27        ;
+; SW[*]     ; CLOCK_27   ; 6.092 ;      ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 6.104 ;      ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 6.092 ;      ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 6.162 ;      ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 6.695 ;      ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 7.079 ;      ; Rise       ; CLOCK_27        ;
++-----------+------------+-------+------+------------+-----------------+
+
+
++----------------------------------------------------------------------+
+; Minimum Output Enable Times                                          ;
++-----------+------------+-------+------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+------+------------+-----------------+
+; HEX0[*]   ; CLOCK_27   ; 6.481 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[0]  ; CLOCK_27   ; 7.179 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[1]  ; CLOCK_27   ; 7.080 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[2]  ; CLOCK_27   ; 7.081 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[3]  ; CLOCK_27   ; 6.481 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[4]  ; CLOCK_27   ; 6.551 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[5]  ; CLOCK_27   ; 6.964 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[6]  ; CLOCK_27   ; 7.275 ;      ; Rise       ; CLOCK_27        ;
+; HEX1[*]   ; CLOCK_27   ; 6.421 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[0]  ; CLOCK_27   ; 6.659 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[1]  ; CLOCK_27   ; 6.672 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[2]  ; CLOCK_27   ; 6.830 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[3]  ; CLOCK_27   ; 6.866 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[4]  ; CLOCK_27   ; 6.939 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[5]  ; CLOCK_27   ; 6.549 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[6]  ; CLOCK_27   ; 6.421 ;      ; Rise       ; CLOCK_27        ;
+; HEX2[*]   ; CLOCK_27   ; 6.123 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[0]  ; CLOCK_27   ; 7.349 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[1]  ; CLOCK_27   ; 6.900 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[2]  ; CLOCK_27   ; 6.123 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[3]  ; CLOCK_27   ; 6.738 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[4]  ; CLOCK_27   ; 7.263 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[5]  ; CLOCK_27   ; 6.863 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[6]  ; CLOCK_27   ; 7.166 ;      ; Rise       ; CLOCK_27        ;
+; LEDG[*]   ; CLOCK_27   ; 6.159 ;      ; Rise       ; CLOCK_27        ;
+;  LEDG[3]  ; CLOCK_27   ; 6.957 ;      ; Rise       ; CLOCK_27        ;
+;  LEDG[4]  ; CLOCK_27   ; 6.159 ;      ; Rise       ; CLOCK_27        ;
+;  LEDG[5]  ; CLOCK_27   ; 6.798 ;      ; Rise       ; CLOCK_27        ;
+; LEDR[*]   ; CLOCK_27   ; 6.423 ;      ; Rise       ; CLOCK_27        ;
+;  LEDR[0]  ; CLOCK_27   ; 7.505 ;      ; Rise       ; CLOCK_27        ;
+;  LEDR[1]  ; CLOCK_27   ; 6.423 ;      ; Rise       ; CLOCK_27        ;
+;  LEDR[2]  ; CLOCK_27   ; 6.835 ;      ; Rise       ; CLOCK_27        ;
+; SW[*]     ; CLOCK_27   ; 6.092 ;      ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 6.104 ;      ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 6.092 ;      ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 6.162 ;      ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 6.695 ;      ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 7.079 ;      ; Rise       ; CLOCK_27        ;
++-----------+------------+-------+------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Output Disable Times                                                          ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; Data Port ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; HEX0[*]   ; CLOCK_27   ; 6.481     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[0]  ; CLOCK_27   ; 7.179     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[1]  ; CLOCK_27   ; 7.080     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[2]  ; CLOCK_27   ; 7.081     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[3]  ; CLOCK_27   ; 6.481     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[4]  ; CLOCK_27   ; 6.551     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[5]  ; CLOCK_27   ; 6.964     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[6]  ; CLOCK_27   ; 7.275     ;           ; Rise       ; CLOCK_27        ;
+; HEX1[*]   ; CLOCK_27   ; 6.421     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[0]  ; CLOCK_27   ; 6.659     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[1]  ; CLOCK_27   ; 6.672     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[2]  ; CLOCK_27   ; 6.830     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[3]  ; CLOCK_27   ; 6.866     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[4]  ; CLOCK_27   ; 6.939     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[5]  ; CLOCK_27   ; 6.549     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[6]  ; CLOCK_27   ; 6.421     ;           ; Rise       ; CLOCK_27        ;
+; HEX2[*]   ; CLOCK_27   ; 6.123     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[0]  ; CLOCK_27   ; 7.349     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[1]  ; CLOCK_27   ; 6.900     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[2]  ; CLOCK_27   ; 6.123     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[3]  ; CLOCK_27   ; 6.738     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[4]  ; CLOCK_27   ; 7.263     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[5]  ; CLOCK_27   ; 6.863     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[6]  ; CLOCK_27   ; 7.166     ;           ; Rise       ; CLOCK_27        ;
+; LEDG[*]   ; CLOCK_27   ; 6.159     ;           ; Rise       ; CLOCK_27        ;
+;  LEDG[3]  ; CLOCK_27   ; 6.957     ;           ; Rise       ; CLOCK_27        ;
+;  LEDG[4]  ; CLOCK_27   ; 6.159     ;           ; Rise       ; CLOCK_27        ;
+;  LEDG[5]  ; CLOCK_27   ; 6.798     ;           ; Rise       ; CLOCK_27        ;
+; LEDR[*]   ; CLOCK_27   ; 6.423     ;           ; Rise       ; CLOCK_27        ;
+;  LEDR[0]  ; CLOCK_27   ; 7.505     ;           ; Rise       ; CLOCK_27        ;
+;  LEDR[1]  ; CLOCK_27   ; 6.423     ;           ; Rise       ; CLOCK_27        ;
+;  LEDR[2]  ; CLOCK_27   ; 6.835     ;           ; Rise       ; CLOCK_27        ;
+; SW[*]     ; CLOCK_27   ; 6.092     ;           ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 6.104     ;           ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 6.092     ;           ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 6.162     ;           ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 6.695     ;           ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 7.079     ;           ; Rise       ; CLOCK_27        ;
++-----------+------------+-----------+-----------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                  ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; Data Port ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; HEX0[*]   ; CLOCK_27   ; 6.481     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[0]  ; CLOCK_27   ; 7.179     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[1]  ; CLOCK_27   ; 7.080     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[2]  ; CLOCK_27   ; 7.081     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[3]  ; CLOCK_27   ; 6.481     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[4]  ; CLOCK_27   ; 6.551     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[5]  ; CLOCK_27   ; 6.964     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[6]  ; CLOCK_27   ; 7.275     ;           ; Rise       ; CLOCK_27        ;
+; HEX1[*]   ; CLOCK_27   ; 6.421     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[0]  ; CLOCK_27   ; 6.659     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[1]  ; CLOCK_27   ; 6.672     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[2]  ; CLOCK_27   ; 6.830     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[3]  ; CLOCK_27   ; 6.866     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[4]  ; CLOCK_27   ; 6.939     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[5]  ; CLOCK_27   ; 6.549     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[6]  ; CLOCK_27   ; 6.421     ;           ; Rise       ; CLOCK_27        ;
+; HEX2[*]   ; CLOCK_27   ; 6.123     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[0]  ; CLOCK_27   ; 7.349     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[1]  ; CLOCK_27   ; 6.900     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[2]  ; CLOCK_27   ; 6.123     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[3]  ; CLOCK_27   ; 6.738     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[4]  ; CLOCK_27   ; 7.263     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[5]  ; CLOCK_27   ; 6.863     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[6]  ; CLOCK_27   ; 7.166     ;           ; Rise       ; CLOCK_27        ;
+; LEDG[*]   ; CLOCK_27   ; 6.159     ;           ; Rise       ; CLOCK_27        ;
+;  LEDG[3]  ; CLOCK_27   ; 6.957     ;           ; Rise       ; CLOCK_27        ;
+;  LEDG[4]  ; CLOCK_27   ; 6.159     ;           ; Rise       ; CLOCK_27        ;
+;  LEDG[5]  ; CLOCK_27   ; 6.798     ;           ; Rise       ; CLOCK_27        ;
+; LEDR[*]   ; CLOCK_27   ; 6.423     ;           ; Rise       ; CLOCK_27        ;
+;  LEDR[0]  ; CLOCK_27   ; 7.505     ;           ; Rise       ; CLOCK_27        ;
+;  LEDR[1]  ; CLOCK_27   ; 6.423     ;           ; Rise       ; CLOCK_27        ;
+;  LEDR[2]  ; CLOCK_27   ; 6.835     ;           ; Rise       ; CLOCK_27        ;
+; SW[*]     ; CLOCK_27   ; 6.092     ;           ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 6.104     ;           ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 6.092     ;           ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 6.162     ;           ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 6.695     ;           ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 7.079     ;           ; Rise       ; CLOCK_27        ;
++-----------+------------+-----------+-----------+------------+-----------------+
+
+
++------------------------------------+
+; Fast Model Setup Summary           ;
++----------+---------+---------------+
+; Clock    ; Slack   ; End Point TNS ;
++----------+---------+---------------+
+; CLOCK_27 ; -55.603 ; -3609.353     ;
++----------+---------+---------------+
+
+
++----------------------------------+
+; Fast Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; CLOCK_27 ; 0.215 ; 0.000         ;
++----------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; CLOCK_27 ; -1.627 ; -881.446           ;
++----------+--------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLOCK_27'                                                                                                                                                                                            ;
++---------+----------------------------+------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                  ; To Node                                                                                                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+----------------------------+------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -55.603 ; pip_reg:E_reg_5|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.693     ;
+; -55.560 ; pip_reg:D_reg_8|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.650     ;
+; -55.547 ; pip_reg:D_reg_8|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.637     ;
+; -55.538 ; pip_reg:M_reg_4|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.652     ;
+; -55.537 ; pip_reg:M_reg_0|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.651     ;
+; -55.513 ; pip_reg:E_reg_5|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.603     ;
+; -55.496 ; pip_reg:E_reg_5|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.610     ;
+; -55.460 ; pip_reg:M_reg_2|o_data[31] ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.090      ; 56.549     ;
+; -55.460 ; pip_reg:D_reg_8|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.550     ;
+; -55.415 ; pip_reg:M_reg_1|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.066      ; 56.480     ;
+; -55.407 ; pip_reg:M_reg_4|o_data[3]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.521     ;
+; -55.365 ; pip_reg:E_reg_5|o_data[1]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.035      ; 56.432     ;
+; -55.322 ; pip_reg:D_reg_8|o_data[1]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.035      ; 56.389     ;
+; -55.309 ; pip_reg:D_reg_8|o_data[2]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.035      ; 56.376     ;
+; -55.303 ; pip_reg:E_reg_5|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.393     ;
+; -55.303 ; pip_reg:M_reg_4|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.393     ;
+; -55.300 ; pip_reg:M_reg_4|o_data[0]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.059      ; 56.391     ;
+; -55.299 ; pip_reg:M_reg_0|o_data[0]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.059      ; 56.390     ;
+; -55.275 ; pip_reg:E_reg_5|o_data[2]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.035      ; 56.342     ;
+; -55.260 ; pip_reg:D_reg_8|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.350     ;
+; -55.258 ; pip_reg:E_reg_5|o_data[0]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.059      ; 56.349     ;
+; -55.254 ; pip_reg:E_reg_5|o_data[3]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.344     ;
+; -55.247 ; pip_reg:D_reg_8|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.337     ;
+; -55.244 ; pip_reg:E_reg_5|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.334     ;
+; -55.238 ; pip_reg:M_reg_4|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.352     ;
+; -55.237 ; pip_reg:M_reg_0|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.351     ;
+; -55.222 ; pip_reg:M_reg_2|o_data[31] ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.034      ; 56.288     ;
+; -55.222 ; pip_reg:D_reg_8|o_data[0]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.035      ; 56.289     ;
+; -55.213 ; pip_reg:E_reg_5|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.303     ;
+; -55.201 ; pip_reg:D_reg_8|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.291     ;
+; -55.196 ; pip_reg:E_reg_5|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.310     ;
+; -55.188 ; pip_reg:D_reg_8|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.278     ;
+; -55.179 ; pip_reg:M_reg_4|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.293     ;
+; -55.178 ; pip_reg:M_reg_0|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.292     ;
+; -55.177 ; pip_reg:M_reg_1|o_data[0]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.010      ; 56.219     ;
+; -55.169 ; pip_reg:M_reg_4|o_data[3]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.059      ; 56.260     ;
+; -55.167 ; pip_reg:M_reg_4|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.257     ;
+; -55.160 ; pip_reg:M_reg_2|o_data[31] ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.090      ; 56.249     ;
+; -55.160 ; pip_reg:D_reg_8|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.250     ;
+; -55.154 ; pip_reg:E_reg_5|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.244     ;
+; -55.137 ; pip_reg:E_reg_5|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.251     ;
+; -55.115 ; pip_reg:M_reg_1|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.066      ; 56.180     ;
+; -55.107 ; pip_reg:M_reg_4|o_data[3]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.221     ;
+; -55.102 ; pip_reg:E_reg_5|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.192     ;
+; -55.101 ; pip_reg:M_reg_2|o_data[31] ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.090      ; 56.190     ;
+; -55.101 ; pip_reg:D_reg_8|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.191     ;
+; -55.099 ; pip_reg:E_reg_0|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.189     ;
+; -55.065 ; pip_reg:M_reg_4|o_data[1]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.035      ; 56.132     ;
+; -55.059 ; pip_reg:D_reg_8|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.149     ;
+; -55.056 ; pip_reg:M_reg_1|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.066      ; 56.121     ;
+; -55.048 ; pip_reg:M_reg_4|o_data[3]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.162     ;
+; -55.046 ; pip_reg:D_reg_8|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.136     ;
+; -55.037 ; pip_reg:M_reg_4|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.151     ;
+; -55.036 ; pip_reg:M_reg_0|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.150     ;
+; -55.023 ; pip_reg:E_reg_5|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.113     ;
+; -55.020 ; pip_reg:E_reg_5|o_data[1]  ; pip_reg:E_reg_3|o_data[16]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.016      ; 56.068     ;
+; -55.018 ; pip_reg:E_reg_3|o_data[31] ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.106      ; 56.123     ;
+; -55.018 ; pip_reg:M_reg_2|o_data[29] ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.048      ; 56.065     ;
+; -55.016 ; pip_reg:E_reg_5|o_data[3]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.035      ; 56.083     ;
+; -55.012 ; pip_reg:E_reg_5|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.102     ;
+; -55.003 ; pip_reg:M_reg_4|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.093     ;
+; -55.001 ; pip_reg:E_reg_5|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.091     ;
+; -54.998 ; pip_reg:E_reg_3|o_data[28] ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.066      ; 56.063     ;
+; -54.995 ; pip_reg:E_reg_5|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.109     ;
+; -54.993 ; pip_reg:E_reg_5|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg3 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.083     ;
+; -54.991 ; pip_reg:M_reg_2|o_data[28] ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.041      ; 56.031     ;
+; -54.980 ; pip_reg:M_reg_3|o_data[31] ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.106      ; 56.085     ;
+; -54.980 ; pip_reg:D_reg_8|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.070     ;
+; -54.977 ; pip_reg:D_reg_8|o_data[1]  ; pip_reg:E_reg_3|o_data[16]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.016      ; 56.025     ;
+; -54.970 ; pip_reg:E_reg_5|o_data[1]  ; pip_reg:E_reg_3|o_data[6]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.020      ; 56.022     ;
+; -54.967 ; pip_reg:E_reg_5|o_data[1]  ; pip_reg:E_reg_3|o_data[15]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; -0.012     ; 55.987     ;
+; -54.967 ; pip_reg:D_reg_8|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.057     ;
+; -54.964 ; pip_reg:D_reg_8|o_data[2]  ; pip_reg:E_reg_3|o_data[16]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.016      ; 56.012     ;
+; -54.959 ; pip_reg:M_reg_2|o_data[31] ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.090      ; 56.048     ;
+; -54.959 ; pip_reg:D_reg_8|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.049     ;
+; -54.958 ; pip_reg:M_reg_4|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.072     ;
+; -54.958 ; pip_reg:D_reg_8|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.048     ;
+; -54.957 ; pip_reg:M_reg_0|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.071     ;
+; -54.955 ; pip_reg:M_reg_4|o_data[0]  ; pip_reg:E_reg_3|o_data[16]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.040      ; 56.027     ;
+; -54.954 ; pip_reg:E_reg_5|o_data[3]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.044     ;
+; -54.954 ; pip_reg:M_reg_0|o_data[0]  ; pip_reg:E_reg_3|o_data[16]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.040      ; 56.026     ;
+; -54.950 ; pip_reg:D_reg_8|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg3 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.040     ;
+; -54.945 ; pip_reg:D_reg_8|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.035     ;
+; -54.944 ; pip_reg:M_reg_4|o_data[1]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.034     ;
+; -54.937 ; pip_reg:D_reg_8|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg3 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.027     ;
+; -54.936 ; pip_reg:M_reg_4|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.050     ;
+; -54.935 ; pip_reg:M_reg_0|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.049     ;
+; -54.933 ; pip_reg:E_reg_5|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.023     ;
+; -54.930 ; pip_reg:E_reg_5|o_data[2]  ; pip_reg:E_reg_3|o_data[16]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.016      ; 55.978     ;
+; -54.929 ; pip_reg:M_reg_4|o_data[2]  ; pip_reg:E_reg_3|o_data[0]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.035      ; 55.996     ;
+; -54.928 ; pip_reg:M_reg_4|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg3 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.042     ;
+; -54.927 ; pip_reg:M_reg_0|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg3 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.041     ;
+; -54.927 ; pip_reg:D_reg_8|o_data[1]  ; pip_reg:E_reg_3|o_data[6]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.020      ; 55.979     ;
+; -54.924 ; pip_reg:D_reg_8|o_data[1]  ; pip_reg:E_reg_3|o_data[15]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; -0.012     ; 55.944     ;
+; -54.916 ; pip_reg:E_reg_5|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.115      ; 56.030     ;
+; -54.914 ; pip_reg:D_reg_8|o_data[2]  ; pip_reg:E_reg_3|o_data[6]                                                                                  ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.020      ; 55.966     ;
+; -54.914 ; pip_reg:M_reg_1|o_data[0]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.066      ; 55.979     ;
+; -54.913 ; pip_reg:E_reg_5|o_data[0]  ; pip_reg:E_reg_3|o_data[16]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.040      ; 55.985     ;
+; -54.911 ; pip_reg:E_reg_5|o_data[2]  ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; 0.091      ; 56.001     ;
+; -54.911 ; pip_reg:D_reg_8|o_data[2]  ; pip_reg:E_reg_3|o_data[15]                                                                                 ; CLOCK_27     ; CLOCK_27    ; 1.000        ; -0.012     ; 55.931     ;
++---------+----------------------------+------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLOCK_27'                                                                                                                                             ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; pip_reg:F_reg_0|o_data[31]                  ; pip_reg:F_reg_0|o_data[31]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; pip_reg:F_reg_0|o_data[28]                  ; pip_reg:F_reg_0|o_data[28]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; pip_reg:F_reg_0|o_data[26]                  ; pip_reg:F_reg_0|o_data[26]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][26]              ; gpio:gpio_0|gpio_regs[130][26]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][26]              ; gpio:gpio_0|gpio_regs[128][26]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][2]               ; gpio:gpio_0|gpio_regs[128][2]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][2]               ; gpio:gpio_0|gpio_regs[130][2]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][7]               ; gpio:gpio_0|gpio_regs[130][7]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][7]               ; gpio:gpio_0|gpio_regs[128][7]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][10]              ; gpio:gpio_0|gpio_regs[130][10]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][10]              ; gpio:gpio_0|gpio_regs[128][10]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][9]               ; gpio:gpio_0|gpio_regs[128][9]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][9]               ; gpio:gpio_0|gpio_regs[130][9]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][11]              ; gpio:gpio_0|gpio_regs[130][11]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][11]              ; gpio:gpio_0|gpio_regs[128][11]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][21]              ; gpio:gpio_0|gpio_regs[130][21]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][21]              ; gpio:gpio_0|gpio_regs[128][21]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][13]              ; gpio:gpio_0|gpio_regs[130][13]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][13]              ; gpio:gpio_0|gpio_regs[128][13]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][3]               ; gpio:gpio_0|gpio_regs[130][3]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][3]               ; gpio:gpio_0|gpio_regs[128][3]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][5]               ; gpio:gpio_0|gpio_regs[128][5]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][5]               ; gpio:gpio_0|gpio_regs[130][5]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][17]              ; gpio:gpio_0|gpio_regs[130][17]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][17]              ; gpio:gpio_0|gpio_regs[128][17]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][22]              ; gpio:gpio_0|gpio_regs[128][22]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][22]              ; gpio:gpio_0|gpio_regs[130][22]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][23]              ; gpio:gpio_0|gpio_regs[130][23]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][23]              ; gpio:gpio_0|gpio_regs[128][23]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][25]              ; gpio:gpio_0|gpio_regs[130][25]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][25]              ; gpio:gpio_0|gpio_regs[128][25]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][20]              ; gpio:gpio_0|gpio_regs[130][20]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][20]              ; gpio:gpio_0|gpio_regs[128][20]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][16]              ; gpio:gpio_0|gpio_regs[130][16]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][16]              ; gpio:gpio_0|gpio_regs[128][16]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][18]              ; gpio:gpio_0|gpio_regs[128][18]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][18]              ; gpio:gpio_0|gpio_regs[130][18]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][15]              ; gpio:gpio_0|gpio_regs[128][15]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][15]              ; gpio:gpio_0|gpio_regs[130][15]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][27]              ; gpio:gpio_0|gpio_regs[130][27]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][27]              ; gpio:gpio_0|gpio_regs[128][27]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][24]              ; gpio:gpio_0|gpio_regs[130][24]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][24]              ; gpio:gpio_0|gpio_regs[128][24]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][14]              ; gpio:gpio_0|gpio_regs[128][14]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][14]              ; gpio:gpio_0|gpio_regs[130][14]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][19]              ; gpio:gpio_0|gpio_regs[130][19]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][19]              ; gpio:gpio_0|gpio_regs[128][19]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][8]               ; gpio:gpio_0|gpio_regs[128][8]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][8]               ; gpio:gpio_0|gpio_regs[130][8]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][29]              ; gpio:gpio_0|gpio_regs[130][29]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][29]              ; gpio:gpio_0|gpio_regs[128][29]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][6]               ; gpio:gpio_0|gpio_regs[128][6]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][6]               ; gpio:gpio_0|gpio_regs[130][6]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][30]              ; gpio:gpio_0|gpio_regs[128][30]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][30]              ; gpio:gpio_0|gpio_regs[130][30]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][4]               ; gpio:gpio_0|gpio_regs[130][4]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][4]               ; gpio:gpio_0|gpio_regs[128][4]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][28]              ; gpio:gpio_0|gpio_regs[130][28]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][28]              ; gpio:gpio_0|gpio_regs[128][28]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][31]              ; gpio:gpio_0|gpio_regs[130][31]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][31]              ; gpio:gpio_0|gpio_regs[128][31]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][12]              ; gpio:gpio_0|gpio_regs[130][12]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][12]              ; gpio:gpio_0|gpio_regs[128][12]              ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][1]               ; gpio:gpio_0|gpio_regs[130][1]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][1]               ; gpio:gpio_0|gpio_regs[128][1]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[130][0]               ; gpio:gpio_0|gpio_regs[130][0]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; gpio:gpio_0|gpio_regs[128][0]               ; gpio:gpio_0|gpio_regs[128][0]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; pip_reg:F_reg_0|o_data[27]                  ; pip_reg:F_reg_0|o_data[27]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.237 ; data_memory:data_mem_0|ram_rtl_0_bypass[63] ; pip_reg:M_reg_2|o_data[24]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.389      ;
+; 0.238 ; data_memory:data_mem_0|ram_rtl_0_bypass[27] ; pip_reg:M_reg_2|o_data[6]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.390      ;
+; 0.239 ; pip_reg:F_reg_0|o_data[2]                   ; prog_counter:pc_0|o_data[2]                 ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; data_memory:data_mem_0|ram_rtl_0_bypass[33] ; pip_reg:M_reg_2|o_data[9]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; data_memory:data_mem_0|ram_rtl_0_bypass[57] ; pip_reg:M_reg_2|o_data[21]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; data_memory:data_mem_0|ram_rtl_0_bypass[71] ; pip_reg:M_reg_2|o_data[28]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; data_memory:data_mem_0|ram_rtl_0_bypass[39] ; pip_reg:M_reg_2|o_data[12]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.241 ; data_memory:data_mem_0|ram_rtl_0_bypass[35] ; pip_reg:M_reg_2|o_data[10]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.393      ;
+; 0.244 ; pip_reg:E_reg_4|o_data[5]                   ; data_memory:data_mem_0|ram_rtl_0_bypass[25] ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.396      ;
+; 0.244 ; data_memory:data_mem_0|ram_rtl_0_bypass[69] ; pip_reg:M_reg_2|o_data[27]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.396      ;
+; 0.245 ; data_memory:data_mem_0|ram_rtl_0_bypass[37] ; pip_reg:M_reg_2|o_data[11]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.397      ;
+; 0.248 ; data_memory:data_mem_0|ram_rtl_0_bypass[21] ; pip_reg:M_reg_2|o_data[3]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.400      ;
+; 0.254 ; pip_reg:D_reg_4|o_data[0]                   ; pip_reg:E_reg_5|o_data[0]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.406      ;
+; 0.257 ; prog_counter:pc_0|o_data[6]                 ; pip_reg:F_reg_0|o_data[2]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.409      ;
+; 0.257 ; prog_counter:pc_0|o_data[6]                 ; pip_reg:F_reg_0|o_data[12]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.409      ;
+; 0.265 ; pip_reg:E_reg_4|o_data[7]                   ; data_memory:data_mem_0|ram_rtl_0_bypass[29] ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.417      ;
+; 0.265 ; pip_reg:E_reg_4|o_data[17]                  ; data_memory:data_mem_0|ram_rtl_0_bypass[49] ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.417      ;
+; 0.265 ; pip_reg:E_reg_4|o_data[17]                  ; data_memory:data_mem_0|ram~18               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.417      ;
+; 0.266 ; pip_reg:E_reg_4|o_data[7]                   ; data_memory:data_mem_0|ram~8                ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.418      ;
+; 0.266 ; pip_reg:E_reg_4|o_data[20]                  ; data_memory:data_mem_0|ram_rtl_0_bypass[55] ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.418      ;
+; 0.294 ; pip_reg:E_reg_4|o_data[19]                  ; data_memory:data_mem_0|ram_rtl_0_bypass[53] ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.446      ;
+; 0.310 ; data_memory:data_mem_0|ram_rtl_0_bypass[59] ; pip_reg:M_reg_2|o_data[22]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.001      ; 0.463      ;
+; 0.312 ; prog_counter:pc_0|o_data[5]                 ; pip_reg:F_reg_0|o_data[2]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.464      ;
+; 0.329 ; data_memory:data_mem_0|ram_rtl_0_bypass[31] ; pip_reg:M_reg_2|o_data[8]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.481      ;
+; 0.329 ; data_memory:data_mem_0|ram_rtl_0_bypass[15] ; pip_reg:M_reg_2|o_data[0]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.003      ; 0.484      ;
+; 0.339 ; pip_reg:E_reg_3|o_data[31]                  ; pip_reg:M_reg_3|o_data[31]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.491      ;
+; 0.345 ; data_memory:data_mem_0|ram_rtl_0_bypass[19] ; pip_reg:M_reg_2|o_data[2]                   ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.003      ; 0.500      ;
+; 0.345 ; pip_reg:E_reg_4|o_data[6]                   ; gpio:gpio_0|gpio_regs[128][6]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; -0.003     ; 0.494      ;
+; 0.348 ; pip_reg:E_reg_4|o_data[6]                   ; gpio:gpio_0|gpio_regs[130][6]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; -0.003     ; 0.497      ;
+; 0.351 ; pip_reg:E_reg_4|o_data[9]                   ; gpio:gpio_0|gpio_regs[128][9]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; -0.003     ; 0.500      ;
+; 0.351 ; pip_reg:E_reg_4|o_data[9]                   ; gpio:gpio_0|gpio_regs[130][9]               ; CLOCK_27     ; CLOCK_27    ; 0.000        ; -0.003     ; 0.500      ;
+; 0.356 ; data_memory:data_mem_0|ram_rtl_0_bypass[47] ; pip_reg:M_reg_2|o_data[16]                  ; CLOCK_27     ; CLOCK_27    ; 0.000        ; 0.000      ; 0.508      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK_27'                                                                                                                                                     ;
++--------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                                                                                     ;
++--------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------------------------------+
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg10 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg10 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg11 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg11 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg12 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg12 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg13 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg13 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg14 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg14 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg15 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg15 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg16 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg16 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg17 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg17 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg18 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg18 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg19 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg19 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg20 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg20 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg21 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg21 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg22 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg22 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg23 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg23 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg24 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg24 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg25 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg25 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg26 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg26 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg27 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg27 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg28 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg28 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg29 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg29 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg30 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg30 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg31 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg31 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg8  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg8  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg9  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_datain_reg9  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg1 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg2 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg3 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg4 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg5 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a0~portb_address_reg6 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a10~porta_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a10~porta_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a11~porta_memory_reg0 ;
+; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLOCK_27 ; Rise       ; data_memory:data_mem_0|altsyncram:ram_rtl_0|altsyncram_ejh1:auto_generated|ram_block1a11~porta_memory_reg0 ;
++--------+--------------+----------------+------------------+----------+------------+------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; CLOCK_27   ; 2.673 ; 2.673 ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 2.673 ; 2.673 ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 2.495 ; 2.495 ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 2.532 ; 2.532 ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 2.519 ; 2.519 ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 2.419 ; 2.419 ; Rise       ; CLOCK_27        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; CLOCK_27   ; -2.299 ; -2.299 ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; -2.553 ; -2.553 ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; -2.375 ; -2.375 ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; -2.412 ; -2.412 ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; -2.399 ; -2.399 ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; -2.299 ; -2.299 ; Rise       ; CLOCK_27        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; CLOCK_27   ; 4.144  ; 4.144  ; Rise       ; CLOCK_27        ;
+;  HEX0[0]  ; CLOCK_27   ; 3.991  ; 3.991  ; Rise       ; CLOCK_27        ;
+;  HEX0[1]  ; CLOCK_27   ; 3.891  ; 3.891  ; Rise       ; CLOCK_27        ;
+;  HEX0[2]  ; CLOCK_27   ; 3.759  ; 3.759  ; Rise       ; CLOCK_27        ;
+;  HEX0[3]  ; CLOCK_27   ; 3.639  ; 3.639  ; Rise       ; CLOCK_27        ;
+;  HEX0[4]  ; CLOCK_27   ; 3.680  ; 3.680  ; Rise       ; CLOCK_27        ;
+;  HEX0[5]  ; CLOCK_27   ; 3.870  ; 3.870  ; Rise       ; CLOCK_27        ;
+;  HEX0[6]  ; CLOCK_27   ; 4.144  ; 4.144  ; Rise       ; CLOCK_27        ;
+; HEX1[*]   ; CLOCK_27   ; 3.856  ; 3.856  ; Rise       ; CLOCK_27        ;
+;  HEX1[0]  ; CLOCK_27   ; 3.744  ; 3.744  ; Rise       ; CLOCK_27        ;
+;  HEX1[1]  ; CLOCK_27   ; 3.662  ; 3.662  ; Rise       ; CLOCK_27        ;
+;  HEX1[2]  ; CLOCK_27   ; 3.720  ; 3.720  ; Rise       ; CLOCK_27        ;
+;  HEX1[3]  ; CLOCK_27   ; 3.856  ; 3.856  ; Rise       ; CLOCK_27        ;
+;  HEX1[4]  ; CLOCK_27   ; 3.851  ; 3.851  ; Rise       ; CLOCK_27        ;
+;  HEX1[5]  ; CLOCK_27   ; 3.677  ; 3.677  ; Rise       ; CLOCK_27        ;
+;  HEX1[6]  ; CLOCK_27   ; 3.735  ; 3.735  ; Rise       ; CLOCK_27        ;
+; HEX2[*]   ; CLOCK_27   ; 4.154  ; 4.154  ; Rise       ; CLOCK_27        ;
+;  HEX2[0]  ; CLOCK_27   ; 4.001  ; 4.001  ; Rise       ; CLOCK_27        ;
+;  HEX2[1]  ; CLOCK_27   ; 3.870  ; 3.870  ; Rise       ; CLOCK_27        ;
+;  HEX2[2]  ; CLOCK_27   ; 3.496  ; 3.496  ; Rise       ; CLOCK_27        ;
+;  HEX2[3]  ; CLOCK_27   ; 3.616  ; 3.616  ; Rise       ; CLOCK_27        ;
+;  HEX2[4]  ; CLOCK_27   ; 3.976  ; 3.976  ; Rise       ; CLOCK_27        ;
+;  HEX2[5]  ; CLOCK_27   ; 3.828  ; 3.828  ; Rise       ; CLOCK_27        ;
+;  HEX2[6]  ; CLOCK_27   ; 4.154  ; 4.154  ; Rise       ; CLOCK_27        ;
+; LEDG[*]   ; CLOCK_27   ; 62.402 ; 62.402 ; Rise       ; CLOCK_27        ;
+;  LEDG[0]  ; CLOCK_27   ; 62.402 ; 62.402 ; Rise       ; CLOCK_27        ;
+;  LEDG[1]  ; CLOCK_27   ; 9.839  ; 9.839  ; Rise       ; CLOCK_27        ;
+;  LEDG[2]  ; CLOCK_27   ; 9.437  ; 9.437  ; Rise       ; CLOCK_27        ;
+;  LEDG[3]  ; CLOCK_27   ; 3.836  ; 3.836  ; Rise       ; CLOCK_27        ;
+;  LEDG[4]  ; CLOCK_27   ; 3.526  ; 3.526  ; Rise       ; CLOCK_27        ;
+;  LEDG[5]  ; CLOCK_27   ; 3.815  ; 3.815  ; Rise       ; CLOCK_27        ;
+; LEDR[*]   ; CLOCK_27   ; 3.843  ; 3.843  ; Rise       ; CLOCK_27        ;
+;  LEDR[0]  ; CLOCK_27   ; 3.840  ; 3.840  ; Rise       ; CLOCK_27        ;
+;  LEDR[1]  ; CLOCK_27   ; 3.843  ; 3.843  ; Rise       ; CLOCK_27        ;
+;  LEDR[2]  ; CLOCK_27   ; 3.808  ; 3.808  ; Rise       ; CLOCK_27        ;
+; SW[*]     ; CLOCK_27   ; 3.769  ; 3.769  ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 3.478  ; 3.478  ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 3.470  ; 3.470  ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 3.514  ; 3.514  ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 3.769  ; 3.769  ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 3.621  ; 3.621  ; Rise       ; CLOCK_27        ;
+; instr[*]  ; CLOCK_27   ; 3.933  ; 3.933  ; Rise       ; CLOCK_27        ;
+;  instr[0] ; CLOCK_27   ; 3.819  ; 3.819  ; Rise       ; CLOCK_27        ;
+;  instr[1] ; CLOCK_27   ; 3.899  ; 3.899  ; Rise       ; CLOCK_27        ;
+;  instr[2] ; CLOCK_27   ; 3.779  ; 3.779  ; Rise       ; CLOCK_27        ;
+;  instr[3] ; CLOCK_27   ; 3.933  ; 3.933  ; Rise       ; CLOCK_27        ;
+;  instr[4] ; CLOCK_27   ; 3.903  ; 3.903  ; Rise       ; CLOCK_27        ;
+;  instr[5] ; CLOCK_27   ; 3.689  ; 3.689  ; Rise       ; CLOCK_27        ;
+;  instr[6] ; CLOCK_27   ; 3.617  ; 3.617  ; Rise       ; CLOCK_27        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_27   ; 3.639 ; 3.639 ; Rise       ; CLOCK_27        ;
+;  HEX0[0]  ; CLOCK_27   ; 3.991 ; 3.991 ; Rise       ; CLOCK_27        ;
+;  HEX0[1]  ; CLOCK_27   ; 3.891 ; 3.891 ; Rise       ; CLOCK_27        ;
+;  HEX0[2]  ; CLOCK_27   ; 3.759 ; 3.759 ; Rise       ; CLOCK_27        ;
+;  HEX0[3]  ; CLOCK_27   ; 3.639 ; 3.639 ; Rise       ; CLOCK_27        ;
+;  HEX0[4]  ; CLOCK_27   ; 3.680 ; 3.680 ; Rise       ; CLOCK_27        ;
+;  HEX0[5]  ; CLOCK_27   ; 3.870 ; 3.870 ; Rise       ; CLOCK_27        ;
+;  HEX0[6]  ; CLOCK_27   ; 4.144 ; 4.144 ; Rise       ; CLOCK_27        ;
+; HEX1[*]   ; CLOCK_27   ; 3.662 ; 3.662 ; Rise       ; CLOCK_27        ;
+;  HEX1[0]  ; CLOCK_27   ; 3.744 ; 3.744 ; Rise       ; CLOCK_27        ;
+;  HEX1[1]  ; CLOCK_27   ; 3.662 ; 3.662 ; Rise       ; CLOCK_27        ;
+;  HEX1[2]  ; CLOCK_27   ; 3.720 ; 3.720 ; Rise       ; CLOCK_27        ;
+;  HEX1[3]  ; CLOCK_27   ; 3.856 ; 3.856 ; Rise       ; CLOCK_27        ;
+;  HEX1[4]  ; CLOCK_27   ; 3.851 ; 3.851 ; Rise       ; CLOCK_27        ;
+;  HEX1[5]  ; CLOCK_27   ; 3.677 ; 3.677 ; Rise       ; CLOCK_27        ;
+;  HEX1[6]  ; CLOCK_27   ; 3.735 ; 3.735 ; Rise       ; CLOCK_27        ;
+; HEX2[*]   ; CLOCK_27   ; 3.496 ; 3.496 ; Rise       ; CLOCK_27        ;
+;  HEX2[0]  ; CLOCK_27   ; 4.001 ; 4.001 ; Rise       ; CLOCK_27        ;
+;  HEX2[1]  ; CLOCK_27   ; 3.870 ; 3.870 ; Rise       ; CLOCK_27        ;
+;  HEX2[2]  ; CLOCK_27   ; 3.496 ; 3.496 ; Rise       ; CLOCK_27        ;
+;  HEX2[3]  ; CLOCK_27   ; 3.616 ; 3.616 ; Rise       ; CLOCK_27        ;
+;  HEX2[4]  ; CLOCK_27   ; 3.976 ; 3.976 ; Rise       ; CLOCK_27        ;
+;  HEX2[5]  ; CLOCK_27   ; 3.828 ; 3.828 ; Rise       ; CLOCK_27        ;
+;  HEX2[6]  ; CLOCK_27   ; 4.154 ; 4.154 ; Rise       ; CLOCK_27        ;
+; LEDG[*]   ; CLOCK_27   ; 3.526 ; 3.526 ; Rise       ; CLOCK_27        ;
+;  LEDG[0]  ; CLOCK_27   ; 5.518 ; 5.518 ; Rise       ; CLOCK_27        ;
+;  LEDG[1]  ; CLOCK_27   ; 4.937 ; 4.937 ; Rise       ; CLOCK_27        ;
+;  LEDG[2]  ; CLOCK_27   ; 4.963 ; 4.963 ; Rise       ; CLOCK_27        ;
+;  LEDG[3]  ; CLOCK_27   ; 3.836 ; 3.836 ; Rise       ; CLOCK_27        ;
+;  LEDG[4]  ; CLOCK_27   ; 3.526 ; 3.526 ; Rise       ; CLOCK_27        ;
+;  LEDG[5]  ; CLOCK_27   ; 3.815 ; 3.815 ; Rise       ; CLOCK_27        ;
+; LEDR[*]   ; CLOCK_27   ; 3.808 ; 3.808 ; Rise       ; CLOCK_27        ;
+;  LEDR[0]  ; CLOCK_27   ; 3.840 ; 3.840 ; Rise       ; CLOCK_27        ;
+;  LEDR[1]  ; CLOCK_27   ; 3.843 ; 3.843 ; Rise       ; CLOCK_27        ;
+;  LEDR[2]  ; CLOCK_27   ; 3.808 ; 3.808 ; Rise       ; CLOCK_27        ;
+; SW[*]     ; CLOCK_27   ; 3.470 ; 3.470 ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 3.478 ; 3.478 ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 3.470 ; 3.470 ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 3.514 ; 3.514 ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 3.769 ; 3.769 ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 3.621 ; 3.621 ; Rise       ; CLOCK_27        ;
+; instr[*]  ; CLOCK_27   ; 3.617 ; 3.617 ; Rise       ; CLOCK_27        ;
+;  instr[0] ; CLOCK_27   ; 3.819 ; 3.819 ; Rise       ; CLOCK_27        ;
+;  instr[1] ; CLOCK_27   ; 3.899 ; 3.899 ; Rise       ; CLOCK_27        ;
+;  instr[2] ; CLOCK_27   ; 3.779 ; 3.779 ; Rise       ; CLOCK_27        ;
+;  instr[3] ; CLOCK_27   ; 3.933 ; 3.933 ; Rise       ; CLOCK_27        ;
+;  instr[4] ; CLOCK_27   ; 3.903 ; 3.903 ; Rise       ; CLOCK_27        ;
+;  instr[5] ; CLOCK_27   ; 3.689 ; 3.689 ; Rise       ; CLOCK_27        ;
+;  instr[6] ; CLOCK_27   ; 3.617 ; 3.617 ; Rise       ; CLOCK_27        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------+
+; Output Enable Times                                                  ;
++-----------+------------+-------+------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+------+------------+-----------------+
+; HEX0[*]   ; CLOCK_27   ; 3.588 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[0]  ; CLOCK_27   ; 3.943 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[1]  ; CLOCK_27   ; 3.943 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[2]  ; CLOCK_27   ; 3.861 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[3]  ; CLOCK_27   ; 3.588 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[4]  ; CLOCK_27   ; 3.652 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[5]  ; CLOCK_27   ; 3.876 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[6]  ; CLOCK_27   ; 4.007 ;      ; Rise       ; CLOCK_27        ;
+; HEX1[*]   ; CLOCK_27   ; 3.613 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[0]  ; CLOCK_27   ; 3.725 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[1]  ; CLOCK_27   ; 3.616 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[2]  ; CLOCK_27   ; 3.749 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[3]  ; CLOCK_27   ; 3.808 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[4]  ; CLOCK_27   ; 3.831 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[5]  ; CLOCK_27   ; 3.649 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[6]  ; CLOCK_27   ; 3.613 ;      ; Rise       ; CLOCK_27        ;
+; HEX2[*]   ; CLOCK_27   ; 3.464 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[0]  ; CLOCK_27   ; 3.979 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[1]  ; CLOCK_27   ; 3.831 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[2]  ; CLOCK_27   ; 3.464 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[3]  ; CLOCK_27   ; 3.687 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[4]  ; CLOCK_27   ; 3.930 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[5]  ; CLOCK_27   ; 3.812 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[6]  ; CLOCK_27   ; 3.965 ;      ; Rise       ; CLOCK_27        ;
+; LEDG[*]   ; CLOCK_27   ; 3.479 ;      ; Rise       ; CLOCK_27        ;
+;  LEDG[3]  ; CLOCK_27   ; 3.868 ;      ; Rise       ; CLOCK_27        ;
+;  LEDG[4]  ; CLOCK_27   ; 3.479 ;      ; Rise       ; CLOCK_27        ;
+;  LEDG[5]  ; CLOCK_27   ; 3.768 ;      ; Rise       ; CLOCK_27        ;
+; LEDR[*]   ; CLOCK_27   ; 3.552 ;      ; Rise       ; CLOCK_27        ;
+;  LEDR[0]  ; CLOCK_27   ; 4.023 ;      ; Rise       ; CLOCK_27        ;
+;  LEDR[1]  ; CLOCK_27   ; 3.552 ;      ; Rise       ; CLOCK_27        ;
+;  LEDR[2]  ; CLOCK_27   ; 3.797 ;      ; Rise       ; CLOCK_27        ;
+; SW[*]     ; CLOCK_27   ; 3.440 ;      ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 3.450 ;      ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 3.440 ;      ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 3.482 ;      ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 3.714 ;      ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 3.937 ;      ; Rise       ; CLOCK_27        ;
++-----------+------------+-------+------+------------+-----------------+
+
+
++----------------------------------------------------------------------+
+; Minimum Output Enable Times                                          ;
++-----------+------------+-------+------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+------+------------+-----------------+
+; HEX0[*]   ; CLOCK_27   ; 3.588 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[0]  ; CLOCK_27   ; 3.943 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[1]  ; CLOCK_27   ; 3.943 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[2]  ; CLOCK_27   ; 3.861 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[3]  ; CLOCK_27   ; 3.588 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[4]  ; CLOCK_27   ; 3.652 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[5]  ; CLOCK_27   ; 3.876 ;      ; Rise       ; CLOCK_27        ;
+;  HEX0[6]  ; CLOCK_27   ; 4.007 ;      ; Rise       ; CLOCK_27        ;
+; HEX1[*]   ; CLOCK_27   ; 3.613 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[0]  ; CLOCK_27   ; 3.725 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[1]  ; CLOCK_27   ; 3.616 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[2]  ; CLOCK_27   ; 3.749 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[3]  ; CLOCK_27   ; 3.808 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[4]  ; CLOCK_27   ; 3.831 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[5]  ; CLOCK_27   ; 3.649 ;      ; Rise       ; CLOCK_27        ;
+;  HEX1[6]  ; CLOCK_27   ; 3.613 ;      ; Rise       ; CLOCK_27        ;
+; HEX2[*]   ; CLOCK_27   ; 3.464 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[0]  ; CLOCK_27   ; 3.979 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[1]  ; CLOCK_27   ; 3.831 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[2]  ; CLOCK_27   ; 3.464 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[3]  ; CLOCK_27   ; 3.687 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[4]  ; CLOCK_27   ; 3.930 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[5]  ; CLOCK_27   ; 3.812 ;      ; Rise       ; CLOCK_27        ;
+;  HEX2[6]  ; CLOCK_27   ; 3.965 ;      ; Rise       ; CLOCK_27        ;
+; LEDG[*]   ; CLOCK_27   ; 3.479 ;      ; Rise       ; CLOCK_27        ;
+;  LEDG[3]  ; CLOCK_27   ; 3.868 ;      ; Rise       ; CLOCK_27        ;
+;  LEDG[4]  ; CLOCK_27   ; 3.479 ;      ; Rise       ; CLOCK_27        ;
+;  LEDG[5]  ; CLOCK_27   ; 3.768 ;      ; Rise       ; CLOCK_27        ;
+; LEDR[*]   ; CLOCK_27   ; 3.552 ;      ; Rise       ; CLOCK_27        ;
+;  LEDR[0]  ; CLOCK_27   ; 4.023 ;      ; Rise       ; CLOCK_27        ;
+;  LEDR[1]  ; CLOCK_27   ; 3.552 ;      ; Rise       ; CLOCK_27        ;
+;  LEDR[2]  ; CLOCK_27   ; 3.797 ;      ; Rise       ; CLOCK_27        ;
+; SW[*]     ; CLOCK_27   ; 3.440 ;      ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 3.450 ;      ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 3.440 ;      ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 3.482 ;      ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 3.714 ;      ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 3.937 ;      ; Rise       ; CLOCK_27        ;
++-----------+------------+-------+------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Output Disable Times                                                          ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; Data Port ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; HEX0[*]   ; CLOCK_27   ; 3.588     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[0]  ; CLOCK_27   ; 3.943     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[1]  ; CLOCK_27   ; 3.943     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[2]  ; CLOCK_27   ; 3.861     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[3]  ; CLOCK_27   ; 3.588     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[4]  ; CLOCK_27   ; 3.652     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[5]  ; CLOCK_27   ; 3.876     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[6]  ; CLOCK_27   ; 4.007     ;           ; Rise       ; CLOCK_27        ;
+; HEX1[*]   ; CLOCK_27   ; 3.613     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[0]  ; CLOCK_27   ; 3.725     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[1]  ; CLOCK_27   ; 3.616     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[2]  ; CLOCK_27   ; 3.749     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[3]  ; CLOCK_27   ; 3.808     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[4]  ; CLOCK_27   ; 3.831     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[5]  ; CLOCK_27   ; 3.649     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[6]  ; CLOCK_27   ; 3.613     ;           ; Rise       ; CLOCK_27        ;
+; HEX2[*]   ; CLOCK_27   ; 3.464     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[0]  ; CLOCK_27   ; 3.979     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[1]  ; CLOCK_27   ; 3.831     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[2]  ; CLOCK_27   ; 3.464     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[3]  ; CLOCK_27   ; 3.687     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[4]  ; CLOCK_27   ; 3.930     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[5]  ; CLOCK_27   ; 3.812     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[6]  ; CLOCK_27   ; 3.965     ;           ; Rise       ; CLOCK_27        ;
+; LEDG[*]   ; CLOCK_27   ; 3.479     ;           ; Rise       ; CLOCK_27        ;
+;  LEDG[3]  ; CLOCK_27   ; 3.868     ;           ; Rise       ; CLOCK_27        ;
+;  LEDG[4]  ; CLOCK_27   ; 3.479     ;           ; Rise       ; CLOCK_27        ;
+;  LEDG[5]  ; CLOCK_27   ; 3.768     ;           ; Rise       ; CLOCK_27        ;
+; LEDR[*]   ; CLOCK_27   ; 3.552     ;           ; Rise       ; CLOCK_27        ;
+;  LEDR[0]  ; CLOCK_27   ; 4.023     ;           ; Rise       ; CLOCK_27        ;
+;  LEDR[1]  ; CLOCK_27   ; 3.552     ;           ; Rise       ; CLOCK_27        ;
+;  LEDR[2]  ; CLOCK_27   ; 3.797     ;           ; Rise       ; CLOCK_27        ;
+; SW[*]     ; CLOCK_27   ; 3.440     ;           ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 3.450     ;           ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 3.440     ;           ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 3.482     ;           ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 3.714     ;           ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 3.937     ;           ; Rise       ; CLOCK_27        ;
++-----------+------------+-----------+-----------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                  ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; Data Port ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; HEX0[*]   ; CLOCK_27   ; 3.588     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[0]  ; CLOCK_27   ; 3.943     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[1]  ; CLOCK_27   ; 3.943     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[2]  ; CLOCK_27   ; 3.861     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[3]  ; CLOCK_27   ; 3.588     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[4]  ; CLOCK_27   ; 3.652     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[5]  ; CLOCK_27   ; 3.876     ;           ; Rise       ; CLOCK_27        ;
+;  HEX0[6]  ; CLOCK_27   ; 4.007     ;           ; Rise       ; CLOCK_27        ;
+; HEX1[*]   ; CLOCK_27   ; 3.613     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[0]  ; CLOCK_27   ; 3.725     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[1]  ; CLOCK_27   ; 3.616     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[2]  ; CLOCK_27   ; 3.749     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[3]  ; CLOCK_27   ; 3.808     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[4]  ; CLOCK_27   ; 3.831     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[5]  ; CLOCK_27   ; 3.649     ;           ; Rise       ; CLOCK_27        ;
+;  HEX1[6]  ; CLOCK_27   ; 3.613     ;           ; Rise       ; CLOCK_27        ;
+; HEX2[*]   ; CLOCK_27   ; 3.464     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[0]  ; CLOCK_27   ; 3.979     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[1]  ; CLOCK_27   ; 3.831     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[2]  ; CLOCK_27   ; 3.464     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[3]  ; CLOCK_27   ; 3.687     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[4]  ; CLOCK_27   ; 3.930     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[5]  ; CLOCK_27   ; 3.812     ;           ; Rise       ; CLOCK_27        ;
+;  HEX2[6]  ; CLOCK_27   ; 3.965     ;           ; Rise       ; CLOCK_27        ;
+; LEDG[*]   ; CLOCK_27   ; 3.479     ;           ; Rise       ; CLOCK_27        ;
+;  LEDG[3]  ; CLOCK_27   ; 3.868     ;           ; Rise       ; CLOCK_27        ;
+;  LEDG[4]  ; CLOCK_27   ; 3.479     ;           ; Rise       ; CLOCK_27        ;
+;  LEDG[5]  ; CLOCK_27   ; 3.768     ;           ; Rise       ; CLOCK_27        ;
+; LEDR[*]   ; CLOCK_27   ; 3.552     ;           ; Rise       ; CLOCK_27        ;
+;  LEDR[0]  ; CLOCK_27   ; 4.023     ;           ; Rise       ; CLOCK_27        ;
+;  LEDR[1]  ; CLOCK_27   ; 3.552     ;           ; Rise       ; CLOCK_27        ;
+;  LEDR[2]  ; CLOCK_27   ; 3.797     ;           ; Rise       ; CLOCK_27        ;
+; SW[*]     ; CLOCK_27   ; 3.440     ;           ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 3.450     ;           ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 3.440     ;           ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 3.482     ;           ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 3.714     ;           ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 3.937     ;           ; Rise       ; CLOCK_27        ;
++-----------+------------+-----------+-----------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -123.452  ; 0.215 ; N/A      ; N/A     ; -1.627              ;
+;  CLOCK_27        ; -123.452  ; 0.215 ; N/A      ; N/A     ; -1.627              ;
+; Design-wide TNS  ; -8379.712 ; 0.0   ; 0.0      ; 0.0     ; -881.446            ;
+;  CLOCK_27        ; -8379.712 ; 0.000 ; N/A      ; N/A     ; -881.446            ;
++------------------+-----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; CLOCK_27   ; 5.088 ; 5.088 ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 5.088 ; 5.088 ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 4.703 ; 4.703 ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 4.766 ; 4.766 ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 4.654 ; 4.654 ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 4.565 ; 4.565 ; Rise       ; CLOCK_27        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; CLOCK_27   ; -2.299 ; -2.299 ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; -2.553 ; -2.553 ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; -2.375 ; -2.375 ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; -2.412 ; -2.412 ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; -2.399 ; -2.399 ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; -2.299 ; -2.299 ; Rise       ; CLOCK_27        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++-----------+------------+---------+---------+------------+-----------------+
+; Data Port ; Clock Port ; Rise    ; Fall    ; Clock Edge ; Clock Reference ;
++-----------+------------+---------+---------+------------+-----------------+
+; HEX0[*]   ; CLOCK_27   ; 7.551   ; 7.551   ; Rise       ; CLOCK_27        ;
+;  HEX0[0]  ; CLOCK_27   ; 7.234   ; 7.234   ; Rise       ; CLOCK_27        ;
+;  HEX0[1]  ; CLOCK_27   ; 6.937   ; 6.937   ; Rise       ; CLOCK_27        ;
+;  HEX0[2]  ; CLOCK_27   ; 6.798   ; 6.798   ; Rise       ; CLOCK_27        ;
+;  HEX0[3]  ; CLOCK_27   ; 6.526   ; 6.526   ; Rise       ; CLOCK_27        ;
+;  HEX0[4]  ; CLOCK_27   ; 6.579   ; 6.579   ; Rise       ; CLOCK_27        ;
+;  HEX0[5]  ; CLOCK_27   ; 6.942   ; 6.942   ; Rise       ; CLOCK_27        ;
+;  HEX0[6]  ; CLOCK_27   ; 7.551   ; 7.551   ; Rise       ; CLOCK_27        ;
+; HEX1[*]   ; CLOCK_27   ; 6.956   ; 6.956   ; Rise       ; CLOCK_27        ;
+;  HEX1[0]  ; CLOCK_27   ; 6.674   ; 6.674   ; Rise       ; CLOCK_27        ;
+;  HEX1[1]  ; CLOCK_27   ; 6.707   ; 6.707   ; Rise       ; CLOCK_27        ;
+;  HEX1[2]  ; CLOCK_27   ; 6.660   ; 6.660   ; Rise       ; CLOCK_27        ;
+;  HEX1[3]  ; CLOCK_27   ; 6.925   ; 6.925   ; Rise       ; CLOCK_27        ;
+;  HEX1[4]  ; CLOCK_27   ; 6.956   ; 6.956   ; Rise       ; CLOCK_27        ;
+;  HEX1[5]  ; CLOCK_27   ; 6.575   ; 6.575   ; Rise       ; CLOCK_27        ;
+;  HEX1[6]  ; CLOCK_27   ; 6.672   ; 6.672   ; Rise       ; CLOCK_27        ;
+; HEX2[*]   ; CLOCK_27   ; 7.520   ; 7.520   ; Rise       ; CLOCK_27        ;
+;  HEX2[0]  ; CLOCK_27   ; 7.303   ; 7.303   ; Rise       ; CLOCK_27        ;
+;  HEX2[1]  ; CLOCK_27   ; 6.942   ; 6.942   ; Rise       ; CLOCK_27        ;
+;  HEX2[2]  ; CLOCK_27   ; 6.159   ; 6.159   ; Rise       ; CLOCK_27        ;
+;  HEX2[3]  ; CLOCK_27   ; 6.483   ; 6.483   ; Rise       ; CLOCK_27        ;
+;  HEX2[4]  ; CLOCK_27   ; 7.262   ; 7.262   ; Rise       ; CLOCK_27        ;
+;  HEX2[5]  ; CLOCK_27   ; 6.872   ; 6.872   ; Rise       ; CLOCK_27        ;
+;  HEX2[6]  ; CLOCK_27   ; 7.520   ; 7.520   ; Rise       ; CLOCK_27        ;
+; LEDG[*]   ; CLOCK_27   ; 136.235 ; 136.235 ; Rise       ; CLOCK_27        ;
+;  LEDG[0]  ; CLOCK_27   ; 136.235 ; 136.235 ; Rise       ; CLOCK_27        ;
+;  LEDG[1]  ; CLOCK_27   ; 19.991  ; 19.991  ; Rise       ; CLOCK_27        ;
+;  LEDG[2]  ; CLOCK_27   ; 18.988  ; 18.988  ; Rise       ; CLOCK_27        ;
+;  LEDG[3]  ; CLOCK_27   ; 6.892   ; 6.892   ; Rise       ; CLOCK_27        ;
+;  LEDG[4]  ; CLOCK_27   ; 6.247   ; 6.247   ; Rise       ; CLOCK_27        ;
+;  LEDG[5]  ; CLOCK_27   ; 6.854   ; 6.854   ; Rise       ; CLOCK_27        ;
+; LEDR[*]   ; CLOCK_27   ; 6.978   ; 6.978   ; Rise       ; CLOCK_27        ;
+;  LEDR[0]  ; CLOCK_27   ; 6.978   ; 6.978   ; Rise       ; CLOCK_27        ;
+;  LEDR[1]  ; CLOCK_27   ; 6.920   ; 6.920   ; Rise       ; CLOCK_27        ;
+;  LEDR[2]  ; CLOCK_27   ; 6.839   ; 6.839   ; Rise       ; CLOCK_27        ;
+; SW[*]     ; CLOCK_27   ; 6.795   ; 6.795   ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 6.134   ; 6.134   ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 6.125   ; 6.125   ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 6.201   ; 6.201   ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 6.795   ; 6.795   ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 6.439   ; 6.439   ; Rise       ; CLOCK_27        ;
+; instr[*]  ; CLOCK_27   ; 7.112   ; 7.112   ; Rise       ; CLOCK_27        ;
+;  instr[0] ; CLOCK_27   ; 6.872   ; 6.872   ; Rise       ; CLOCK_27        ;
+;  instr[1] ; CLOCK_27   ; 7.068   ; 7.068   ; Rise       ; CLOCK_27        ;
+;  instr[2] ; CLOCK_27   ; 6.805   ; 6.805   ; Rise       ; CLOCK_27        ;
+;  instr[3] ; CLOCK_27   ; 7.112   ; 7.112   ; Rise       ; CLOCK_27        ;
+;  instr[4] ; CLOCK_27   ; 7.076   ; 7.076   ; Rise       ; CLOCK_27        ;
+;  instr[5] ; CLOCK_27   ; 6.639   ; 6.639   ; Rise       ; CLOCK_27        ;
+;  instr[6] ; CLOCK_27   ; 6.529   ; 6.529   ; Rise       ; CLOCK_27        ;
++-----------+------------+---------+---------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; CLOCK_27   ; 3.639 ; 3.639 ; Rise       ; CLOCK_27        ;
+;  HEX0[0]  ; CLOCK_27   ; 3.991 ; 3.991 ; Rise       ; CLOCK_27        ;
+;  HEX0[1]  ; CLOCK_27   ; 3.891 ; 3.891 ; Rise       ; CLOCK_27        ;
+;  HEX0[2]  ; CLOCK_27   ; 3.759 ; 3.759 ; Rise       ; CLOCK_27        ;
+;  HEX0[3]  ; CLOCK_27   ; 3.639 ; 3.639 ; Rise       ; CLOCK_27        ;
+;  HEX0[4]  ; CLOCK_27   ; 3.680 ; 3.680 ; Rise       ; CLOCK_27        ;
+;  HEX0[5]  ; CLOCK_27   ; 3.870 ; 3.870 ; Rise       ; CLOCK_27        ;
+;  HEX0[6]  ; CLOCK_27   ; 4.144 ; 4.144 ; Rise       ; CLOCK_27        ;
+; HEX1[*]   ; CLOCK_27   ; 3.662 ; 3.662 ; Rise       ; CLOCK_27        ;
+;  HEX1[0]  ; CLOCK_27   ; 3.744 ; 3.744 ; Rise       ; CLOCK_27        ;
+;  HEX1[1]  ; CLOCK_27   ; 3.662 ; 3.662 ; Rise       ; CLOCK_27        ;
+;  HEX1[2]  ; CLOCK_27   ; 3.720 ; 3.720 ; Rise       ; CLOCK_27        ;
+;  HEX1[3]  ; CLOCK_27   ; 3.856 ; 3.856 ; Rise       ; CLOCK_27        ;
+;  HEX1[4]  ; CLOCK_27   ; 3.851 ; 3.851 ; Rise       ; CLOCK_27        ;
+;  HEX1[5]  ; CLOCK_27   ; 3.677 ; 3.677 ; Rise       ; CLOCK_27        ;
+;  HEX1[6]  ; CLOCK_27   ; 3.735 ; 3.735 ; Rise       ; CLOCK_27        ;
+; HEX2[*]   ; CLOCK_27   ; 3.496 ; 3.496 ; Rise       ; CLOCK_27        ;
+;  HEX2[0]  ; CLOCK_27   ; 4.001 ; 4.001 ; Rise       ; CLOCK_27        ;
+;  HEX2[1]  ; CLOCK_27   ; 3.870 ; 3.870 ; Rise       ; CLOCK_27        ;
+;  HEX2[2]  ; CLOCK_27   ; 3.496 ; 3.496 ; Rise       ; CLOCK_27        ;
+;  HEX2[3]  ; CLOCK_27   ; 3.616 ; 3.616 ; Rise       ; CLOCK_27        ;
+;  HEX2[4]  ; CLOCK_27   ; 3.976 ; 3.976 ; Rise       ; CLOCK_27        ;
+;  HEX2[5]  ; CLOCK_27   ; 3.828 ; 3.828 ; Rise       ; CLOCK_27        ;
+;  HEX2[6]  ; CLOCK_27   ; 4.154 ; 4.154 ; Rise       ; CLOCK_27        ;
+; LEDG[*]   ; CLOCK_27   ; 3.526 ; 3.526 ; Rise       ; CLOCK_27        ;
+;  LEDG[0]  ; CLOCK_27   ; 5.518 ; 5.518 ; Rise       ; CLOCK_27        ;
+;  LEDG[1]  ; CLOCK_27   ; 4.937 ; 4.937 ; Rise       ; CLOCK_27        ;
+;  LEDG[2]  ; CLOCK_27   ; 4.963 ; 4.963 ; Rise       ; CLOCK_27        ;
+;  LEDG[3]  ; CLOCK_27   ; 3.836 ; 3.836 ; Rise       ; CLOCK_27        ;
+;  LEDG[4]  ; CLOCK_27   ; 3.526 ; 3.526 ; Rise       ; CLOCK_27        ;
+;  LEDG[5]  ; CLOCK_27   ; 3.815 ; 3.815 ; Rise       ; CLOCK_27        ;
+; LEDR[*]   ; CLOCK_27   ; 3.808 ; 3.808 ; Rise       ; CLOCK_27        ;
+;  LEDR[0]  ; CLOCK_27   ; 3.840 ; 3.840 ; Rise       ; CLOCK_27        ;
+;  LEDR[1]  ; CLOCK_27   ; 3.843 ; 3.843 ; Rise       ; CLOCK_27        ;
+;  LEDR[2]  ; CLOCK_27   ; 3.808 ; 3.808 ; Rise       ; CLOCK_27        ;
+; SW[*]     ; CLOCK_27   ; 3.470 ; 3.470 ; Rise       ; CLOCK_27        ;
+;  SW[13]   ; CLOCK_27   ; 3.478 ; 3.478 ; Rise       ; CLOCK_27        ;
+;  SW[14]   ; CLOCK_27   ; 3.470 ; 3.470 ; Rise       ; CLOCK_27        ;
+;  SW[15]   ; CLOCK_27   ; 3.514 ; 3.514 ; Rise       ; CLOCK_27        ;
+;  SW[16]   ; CLOCK_27   ; 3.769 ; 3.769 ; Rise       ; CLOCK_27        ;
+;  SW[17]   ; CLOCK_27   ; 3.621 ; 3.621 ; Rise       ; CLOCK_27        ;
+; instr[*]  ; CLOCK_27   ; 3.617 ; 3.617 ; Rise       ; CLOCK_27        ;
+;  instr[0] ; CLOCK_27   ; 3.819 ; 3.819 ; Rise       ; CLOCK_27        ;
+;  instr[1] ; CLOCK_27   ; 3.899 ; 3.899 ; Rise       ; CLOCK_27        ;
+;  instr[2] ; CLOCK_27   ; 3.779 ; 3.779 ; Rise       ; CLOCK_27        ;
+;  instr[3] ; CLOCK_27   ; 3.933 ; 3.933 ; Rise       ; CLOCK_27        ;
+;  instr[4] ; CLOCK_27   ; 3.903 ; 3.903 ; Rise       ; CLOCK_27        ;
+;  instr[5] ; CLOCK_27   ; 3.689 ; 3.689 ; Rise       ; CLOCK_27        ;
+;  instr[6] ; CLOCK_27   ; 3.617 ; 3.617 ; Rise       ; CLOCK_27        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Transfers                                                       ;
++------------+----------+--------------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+--------------+----------+----------+----------+
+; CLOCK_27   ; CLOCK_27 ; > 2147483647 ; 14784    ; 1792     ; 0        ;
++------------+----------+--------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------+
+; Hold Transfers                                                        ;
++------------+----------+--------------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+--------------+----------+----------+----------+
+; CLOCK_27   ; CLOCK_27 ; > 2147483647 ; 14784    ; 1792     ; 0        ;
++------------+----------+--------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 6     ; 6    ;
+; Unconstrained Input Port Paths  ; 555   ; 555  ;
+; Unconstrained Output Ports      ; 42    ; 42   ;
+; Unconstrained Output Port Paths ; 644   ; 644  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Jan 16 10:20:51 2020
+Info: Command: quartus_sta mips_core -c mips_core
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'mips_core.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLOCK_27 CLOCK_27
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -123.452
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):  -123.452     -8379.712 CLOCK_27 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 CLOCK_27 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.627
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.627      -881.446 CLOCK_27 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -55.603
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -55.603     -3609.353 CLOCK_27 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLOCK_27 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.627
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.627      -881.446 CLOCK_27 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 630 megabytes
+    Info: Processing ended: Thu Jan 16 10:22:15 2020
+    Info: Elapsed time: 00:01:24
+    Info: Total CPU time (on all processors): 00:00:26
+
+

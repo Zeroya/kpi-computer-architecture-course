@@ -1,0 +1,4 @@
+Warning (10268): Verilog HDL information at dram_w_cahce.v(57): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at dram_w_cahce.v(98): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at gpio.v(33): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at gpio.v(50): always construct contains both blocking and non-blocking assignments
